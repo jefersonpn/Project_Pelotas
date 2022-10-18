@@ -47,10 +47,6 @@ include_once("conectar.php");
           </label><br><br>
 
           <label>
-            <p>Nascimento</p> <br><input type="date" name="nasc_inf" id="id_nasc">
-          </label><br><br>
-
-          <label>
             <p>Telefone</p> <br><input type="text" name="telefone_inf" id="id_telefone"
               placeholder="+55 (xx) xxxxx-xxxx">
           </label><br><br>
@@ -64,21 +60,6 @@ include_once("conectar.php");
             <p>Endereço</p> <br><input type="text" name="nome_inf" id="id_cidade" placeholder="Insira seu endereço"
               size="60">
           </label><br><br>
-
-          <label>
-            <p>Número</p> <br><input type="text" name="cep" id="cep" placeholder="Número da residência">
-          </label><br><br>
-
-          <label>
-            <p>CEP</p> <br><input type="text" name="cep" id="cep" placeholder="Insira seu CEP">
-          </label><br><br>
-
-          <form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
-            <label>
-              <p>Foto</p> <br><input type="file" name="image" />
-              <!-- <input type="submit" id="button_upload" value="Enviar"
-                                name="envia" /> -->
-          </form><br><br><br>
 
           <p>
             <a href="#"></a><input id="button_doar" type="submit" value="Salvar Alteração" />
