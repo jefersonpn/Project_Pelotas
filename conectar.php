@@ -2,7 +2,7 @@
 $host = 'localhost:3306';
 $user = 'root';
 $pass = '';
-$banco = 'protetor';
+$banco = 'protetor'; //mudar nome do banco
 $conexao = new mysqli($host, $user, $pass, $banco);
 
 if (mysqli_connect_error()) {

@@ -45,81 +45,50 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 }
 ?>
 
-<!DOCTYPE HTML>
-<html lang="pt-br">
+<!--INICIO CABEÇALHO-->
+<?php include('cabecalho.php'); ?>
+<!--FIM CABEÇALHO-->
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Amigo Pet</title>
-    <!-- Aqui chamamos o nosso arquivo css externo -->
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
-    <link rel="stylesheet" type="text/css" href="css/cabecalho.css" />
-    <link rel="stylesheet" type="text/css" href="css/rodape.css" />
-    <link rel="stylesheet" type="text/css" href="css/estilo_texto.css" />
-    <link rel="stylesheet" type="text/css" href="css/formulario.css" />
-</head>
 
-<body>
+<!-- INICIO LOGIN -->
 
-    <!--INICIO CABEÇALHO-->
-    <div class="retangulo">
+<div class="container_login">
 
-        <img class="logo" alt="AMIGO PET" width="150px" src="img/logo.png" />
+  <h3>AMIGOPET</h3>
 
-        <nav>
-            <ul class="menu">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="contato.php">Contato</a></li>
-                <li><a href="sobre.php">Sobre</a></li>
-                <li><a href="parceiro.php">Parceiro</a></li>
-                <li><a href="login.php">Cadastrar | Login</a></li>
-            </ul>
-        </nav>
-    </div>
-    <!--FIM CABEÇALHO-->
-
-    <!-- INICIO LOGIN -->
-
-    <div class="container_login">
-
-        <h3>AMIGOPET</h3>
-
-        <?php
+  <?php
                     if(isset($_SESSION['nao_autenticado'])):
                     ?>
-        <div class="notification is-danger">
-            <p>ERRO: Usuário ou senha inválidos.</p>
-        </div>
+  <div class="notification is-danger">
+    <p>ERRO: Usuário ou senha inválidos.</p>
+  </div>
 
-        <?php
+  <?php
                     endif;
                     unset($_SESSION['nao_autenticado']);
         ?>
 
-        <form action="login.php" method="POST">
-            <div class="field">
-                <div class="control">
-                    <input name="usuario" name="text" placeholder="Seu usuário" autofocus="">
-                </div>
-            </div>
+  <form action="login.php" method="POST">
+    <div class="field">
+      <div class="control">
+        <input name="usuario" name="text" placeholder="Seu usuário" autofocus="">
+      </div>
+    </div>
 
-            <div class="field">
-                <div class="control">
-                    <input name="senha" type="password" placeholder="Sua senha">
-                </div>
-            </div>
+    <div class="field">
+      <div class="control">
+        <input name="senha" type="password" placeholder="Sua senha">
+      </div>
+    </div>
 
-            <div class="field">
-                <a href="cadastro.php">Cadastrar</a>
-            </div>
+    <div class="field">
+      <a href="cadastro.php">Cadastrar</a>
+    </div>
 
-            <button type="submit">Entrar</button>
-        </form>
+    <button type="submit">Entrar</button>
+  </form>
 
-        <!-- <p class="link">Faça o seu login<br><br><br>
+  <!-- <p class="link">Faça o seu login<br><br><br>
 
             Ainda não tem conta?
             <a href="cadastrar_login.php">Cadastre-se</a>
@@ -139,29 +108,29 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
             </p>
         </form> -->
 
-        <!-- FIM LOGIN -->
+  <!-- FIM LOGIN -->
 
-        <!--INICIO RODAPE-->
-        <footer>
-            <footer id="rodape">
-                <img class="logo2" alt="AMIGO PET" width="150x" src="img/logo.png" />
+  <!--INICIO RODAPE-->
+  <footer>
+    <footer id="rodape">
+      <img class="logo2" alt="AMIGO PET" width="150x" src="img/logo.png" />
 
-                <div class="sitemap">
-                    <li><a href="home.php">Home</a></li>
-                    <li><a href="contato.php">Contato</a></li>
-                    <li><a href="sobre.php">Sobre</a></li>
-                    <li><a href="parceiro.php">Parceiro</a></li>
-                    <li><a href="login.php">Cadastrar | Login</a></li>
-                </div>
+      <div class="sitemap">
+        <li><a href="home.php">Home</a></li>
+        <li><a href="contato.php">Contato</a></li>
+        <li><a href="sobre.php">Sobre</a></li>
+        <li><a href="parceiro.php">Parceiro</a></li>
+        <li><a href="login.php">Cadastrar | Login</a></li>
+      </div>
 
-                <div class="direitos_autorais">
-                    Instituto Amigo Pet © 2022 Todos os direitos reservados.
-                    Consulte nossa Política de Privacidade.
-                </div>
-            </footer>
-            <!--FIM RODAPE-->
+      <div class="direitos_autorais">
+        Instituto Amigo Pet © 2022 Todos os direitos reservados.
+        Consulte nossa Política de Privacidade.
+      </div>
+    </footer>
+    <!--FIM RODAPE-->
 
 
-</body>
+    </body>
 
-</html>
+    </html>

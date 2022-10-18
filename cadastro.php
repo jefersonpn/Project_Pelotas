@@ -1,18 +1,12 @@
-<html>
+<!--INICIO CABEÇALHO-->
+<?php include('cabecalho.php'); ?>
+<!--FIM CABEÇALHO-->
 
-<head>
-    <meta charset="utf-8">
-    <title>Cadastro de Funcionários</title>
-    <link rel="stylesheet" text="text/css" href="estilo.css">
-</head>
-
-<body>
-
-    <?php
+<?php
 require ("conectar.php");
 ?>
 
-    <?php
+<?php
 
 // doador
 $nome = $_POST['nome'];

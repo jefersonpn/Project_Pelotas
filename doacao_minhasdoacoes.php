@@ -5,7 +5,7 @@ include_once("conectar.php");
 <!DOCTYPE HTML>
 <html lang="pt-br">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,144 +16,131 @@ include_once("conectar.php");
     <link rel="stylesheet" type="text/css" href="css/doacao_rodape.css" />
     <link rel="stylesheet" type="text/css" href="css/doacao_formulario.css" />
     <link rel="stylesheet" type="text/css" href="css/doacao.css" />
-</head>
+  </head>
 
-<body>
+  <body>
 
     <!--INICIO CABEÇALHO-->
-    <div class="retangulo">
 
-        <img class="logo" alt="AMIGO PET" width="150px" src="img/logo.png" />
+    <?php include('cabecalho.php'); ?>
 
-        <nav>
-            <ul class="menu">
-                <li><a href="amigopet.html">Principal</a></li>
-                <li><a href="editarCadastro.html">Perfil</a></li>
-                <li><a href="doacao_escolhe.html">Doação</a></li>
-                <li><a href="doacao_solicitar.html">Solicitação</a></li>
-                <li><a href="index.html">Sair</a></li>
-            </ul>
-        </nav>
-    </div>
     <!--FIM CABEÇALHO-->
+
 
     <!-- TESTE ABAS -->
 
     <!-- INICIO PARCEIROS ABAS -->
 
     <div id='busca'>
-        <form action="buscadoacoes.php" method="GET">
-            <input id="txtbusca" name="minhasdoacoes" type="text" placeholder="Digite o que você procura" />
-            <input id="btnBusca" type="submit" value="Ok" />
-        </form>
+      <form action="buscadoacoes.php" method="GET">
+        <input id="txtbusca" name="minhasdoacoes" type="text" placeholder="Digite o que você procura" />
+        <input id="btnBusca" type="submit" value="Ok" />
+      </form>
     </div>
 
     <div class="posicao_padraopc">
-        <!-- Alinhamento do título -->
-        <h3>Área do Parceiro</h3>
+      <!-- Alinhamento do título -->
+      <h3>Área do Parceiro</h3>
     </div>
 
     <div class="container_parceiro">
 
-        <!-- Elemento pai -->
-        <nav class="nav_tabs">
+      <!-- Elemento pai -->
+      <nav class="nav_tabs">
 
-            <ul>
-                <!-- ABA DE ANDAMENTO-->
-                <li>
-                    <!-- selecionar as opções -->
-                    <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
+        <ul>
+          <!-- ABA DE ANDAMENTO-->
+          <li>
+            <!-- selecionar as opções -->
+            <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
 
-                    <!-- Título das abas -->
-                    <label for="tab1" class="tab_label">Doações Finalizadas</label>
+            <!-- Título das abas -->
+            <label for="tab1" class="tab_label">Doações Finalizadas</label>
 
-                    <div class="tab-content">
+            <div class="tab-content">
 
-                        <div class="text">
-                            <div class="item">
-                                <img class="logo" alt="AMIGO PET" width="150px"
-                                    src="img/parceiro_interno/amigopet_parceiro05.png" />
-                            </div>
+              <div class="text">
+                <div class="item">
+                  <img class="logo" alt="AMIGO PET" width="150px" src="img/parceiro_interno/amigopet_parceiro05.png" />
+                </div>
 
-                            <div class="item">
-                                <p><br>
-                                    Roupa para Cachorro
-                                </p><br>
+                <div class="item">
+                  <p><br>
+                    Roupa para Cachorro
+                  </p><br>
 
-                                <p>
-                                    Solicitante(a): Luis
-                                </p>
-                            </div>
+                  <p>
+                    Solicitante(a): Luis
+                  </p>
+                </div>
 
-                            <div class="item">
-                                <button id="button" type="submit">Doação Finalizada</button>
-                            </div>
+                <div class="item">
+                  <button id="button" type="submit">Doação Finalizada</button>
+                </div>
 
-                        </div>
+              </div>
 
-                        <hr>
-                        <!--Linha para separar outras doações-->
-                </li>
+              <hr>
+              <!--Linha para separar outras doações-->
+          </li>
 
-                <li>
-                    <!-- ABA DE PENDENTES -->
-                    <input type="radio" name="tabs" class="rd_tab" id="tab2">
-                    <label for="tab2" class="tab_label">Pendentes</label>
+          <li>
+            <!-- ABA DE PENDENTES -->
+            <input type="radio" name="tabs" class="rd_tab" id="tab2">
+            <label for="tab2" class="tab_label">Pendentes</label>
 
-                    <div class="tab-content">
+            <div class="tab-content">
 
-                        <div class="text">
+              <div class="text">
 
-                            <div class="item">
-                                <img class="logo" alt="AMIGO PET" width="100px"
-                                    src="img/parceiro_interno/amigopet_parceiro01.png" />
-                            </div>
+                <div class="item">
+                  <img class="logo" alt="AMIGO PET" width="100px" src="img/parceiro_interno/amigopet_parceiro01.png" />
+                </div>
 
-                            <div class="item">
-                                <p>
-                                    Roupa Cirúrgica
-                                </p><br>
+                <div class="item">
+                  <p>
+                    Roupa Cirúrgica
+                  </p><br>
 
-                                <p class="texto_doador">Solicitante(a): Luis</p>
-                            </div>
+                  <p class="texto_doador">Solicitante(a): Luis</p>
+                </div>
 
-                            <div class="item">
-                                <button id="button" type="submit">Aguardando Busca</button>
-                            </div>
+                <div class="item">
+                  <button id="button" type="submit">Aguardando Busca</button>
+                </div>
 
-                        </div>
+              </div>
 
-                        <hr>
-                        <!--Linha para separar outras doações-->
+              <hr>
+              <!--Linha para separar outras doações-->
 
-                        <div class="text">
+              <div class="text">
 
-                            <div class="item">
-                                <img class="logo" alt="AMIGO PET" width="100px"
-                                    src="img/parceiro_interno/amigopet_parceiro01.png" />
-                            </div>
+                <div class="item">
+                  <img class="logo" alt="AMIGO PET" width="100px" src="img/parceiro_interno/amigopet_parceiro01.png" />
+                </div>
 
-                            <div class="item">
-                                <p>
-                                    Ração 1,5kg
-                                </p><br>
+                <div class="item">
+                  <p>
+                    Ração 1,5kg
+                  </p><br>
 
-                                <p class="texto_doador">Solicitante(a): Tais</p>
-                            </div>
+                  <p class="texto_doador">Solicitante(a): Tais</p>
+                </div>
 
-                            <div class="item">
-                                <button id="button" type="submit">Não Buscou</button>
-                            </div>
+                <div class="item">
+                  <button id="button" type="submit">Não Buscou</button>
+                </div>
 
-                        </div>
+              </div>
 
-                        <hr>
-                        <!--Linha para separar outras doações-->
+              <hr>
+              <!--Linha para separar outras doações-->
 
-                    </div>
-                </li>
-            </ul>
-        </nav>
+            </div>
+          </li>
+        </ul>
+      </nav>
 
 
     </div>
@@ -196,24 +183,24 @@ include_once("conectar.php");
 
     <!--INICIO RODAPE-->
     <footer>
-        <footer id="rodape">
-            <img class="logo2" alt="AMIGO PET" width="150x" src="img/logo.png" />
+      <footer id="rodape">
+        <img class="logo2" alt="AMIGO PET" width="150x" src="img/logo.png" />
 
-            <div class="sitemap">
-                <li><a href="amigopet.html">Principal</a></li>
-                <li><a href="editarCadastro.html">Perfil</a></li>
-                <li><a href="doacao_escolhe.html">Doação</a></li>
-                <li><a href="doacao_solicitar.html">Solicitação</a></li>
-                <li><a href="index.html">Sair</a></li>
-            </div>
+        <div class="sitemap">
+          <li><a href="amigopet.html">Principal</a></li>
+          <li><a href="editarCadastro.html">Perfil</a></li>
+          <li><a href="doacao_escolhe.html">Doação</a></li>
+          <li><a href="doacao_solicitar.html">Solicitação</a></li>
+          <li><a href="index.html">Sair</a></li>
+        </div>
 
-            <div class="direitos_autorais">
-                Instituto Amigo Pet © 2022 Todos os direitos reservados.
-                Consulte nossa Política de Privacidade.
-            </div>
-        </footer>
-        <!--FIM RODAPE-->
+        <div class="direitos_autorais">
+          Instituto Amigo Pet © 2022 Todos os direitos reservados.
+          Consulte nossa Política de Privacidade.
+        </div>
+      </footer>
+      <!--FIM RODAPE-->
 
-</body>
+  </body>
 
 </html>

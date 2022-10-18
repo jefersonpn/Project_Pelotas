@@ -25,7 +25,7 @@ include("conectar.php");
 <!DOCTYPE HTML>
 <html lang="pt-br">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,55 +36,44 @@ include("conectar.php");
     <link rel="stylesheet" type="text/css" href="css/doacao_rodape.css" />
     <link rel="stylesheet" type="text/css" href="css/doacao_formulario.css" />
     <link rel="stylesheet" type="text/css" href="css/doacao.css" />
-</head>
+  </head>
 
-<body>
+  <body>
 
     <!--INICIO CABEÇALHO-->
-    <div class="retangulo">
 
-        <img class="logo" alt="AMIGO PET" width="150px" src="img/logo.png" />
+    <?php include('cabecalho.php'); ?>
 
-        <nav>
-            <ul class="menu">
-                <li><a href="amigopet.php">Principal</a></li>
-                <li><a href="editarCadastro.php">Perfil</a></li>
-                <li><a href="doacao_escolhe.php">Doação</a></li>
-                <li><a href="doacao_solicitar.php">Solicitação</a></li>
-                <li><a href="index.php">Sair</a></li>
-            </ul>
-        </nav>
-    </div>
     <!--FIM CABEÇALHO-->
+
 
     <body>
 
-        <div class="posicao_padrao">
+      <div class="posicao_padrao">
 
-            <h3>SOLICITE UMA DOAÇÃO</h3><br><br><br>
+        <h3>SOLICITE UMA DOAÇÃO</h3><br><br><br>
 
 
 
-            <form method="Post" action="doacao_doar.php">
+        <form method="Post" action="doacao_doar.php">
 
-                <label>
-                    <p>Nome</p> <br><input type="text" name="descricao" id="id_nome" placeholder="Nome do Objeto"
-                        size="60"><br><br>
-                </label>
+          <label>
+            <p>Nome</p> <br><input type="text" name="descricao" id="id_nome" placeholder="Nome do Objeto"
+              size="60"><br><br>
+          </label>
 
-                <label>
-                    <textarea name="motivo" rows="5" cols="72"></textarea>
-                </label><br><br>
+          <label>
+            <textarea name="motivo" rows="5" cols="72"></textarea>
+          </label><br><br>
 
-                <label>
-                    <p>Quantidade</p> <br><input type="text" name="quantidade" placeholder=" Insira a quantidade"
-                        size="60">
-                </label><br><br>
+          <label>
+            <p>Quantidade</p> <br><input type="text" name="quantidade" placeholder=" Insira a quantidade" size="60">
+          </label><br><br>
 
-                <br><label>
-                    <p>Categoria</p><br>
-                    <select name="categoria" required>
-                        <?php 
+          <br><label>
+            <p>Categoria</p><br>
+            <select name="categoria" required>
+              <?php 
                             $categoria = "SELECT * FROM categoria";
                             $resultado = mysqli_query($mysqli, $categoria);
                             
@@ -94,13 +83,13 @@ include("conectar.php");
                                 echo "<option value='$id'>$nome</option>";
                             }
                         ?>
-                    </select>
-                </label><br><br>
+            </select>
+          </label><br><br>
 
-                <br><label>
-                    <p>Parceiros</p>
-                    <select name="parceiro" required>
-                        <?php 
+          <br><label>
+            <p>Parceiros</p>
+            <select name="parceiro" required>
+              <?php 
                             $categoria = "SELECT * FROM protetor WHERE nomefantasia LIKE '%%' ";
                             $result = mysqli_query($mysqli, $nomefantasia);
                             
@@ -111,36 +100,36 @@ include("conectar.php");
                             }
                             
                         ?>
-                </label>
+          </label>
 
-            </form>
-        </div>
-        <!--
+        </form>
+      </div>
+      <!--
         <p><br><br>
             <input id="button" name="Post" type="button" value="Voltar"></a>
         </p> -->
 
-        </div>
+      </div>
 
-        <!--INICIO RODAPE-->
-        <footer>
-            <footer id="rodape">
-                <img class="logo2" alt="AMIGO PET" width="150x" src="img/logo.png" />
+      <!--INICIO RODAPE-->
+      <footer>
+        <footer id="rodape">
+          <img class="logo2" alt="AMIGO PET" width="150x" src="img/logo.png" />
 
-                <div class="sitemap">
-                    <li><a href="amigopet.php">Principal</a></li>
-                    <li><a href="editarCadastro.php">Perfil</a></li>
-                    <li><a href="doacao_escolhe.php">Doação</a></li>
-                    <li><a href="doacao_solicitar.php">Solicitação</a></li>
-                    <li><a href="index.php">Sair</a></li>
-                </div>
+          <div class="sitemap">
+            <li><a href="amigopet.php">Principal</a></li>
+            <li><a href="editarCadastro.php">Perfil</a></li>
+            <li><a href="doacao_escolhe.php">Doação</a></li>
+            <li><a href="doacao_solicitar.php">Solicitação</a></li>
+            <li><a href="index.php">Sair</a></li>
+          </div>
 
-                <div class="direitos_autorais">
-                    Instituto Amigo Pet © 2022 Todos os direitos reservados.
-                    Consulte nossa Política de Privacidade.
-                </div>
-            </footer>
-            <!--FIM RODAPE-->
+          <div class="direitos_autorais">
+            Instituto Amigo Pet © 2022 Todos os direitos reservados.
+            Consulte nossa Política de Privacidade.
+          </div>
+        </footer>
+        <!--FIM RODAPE-->
 
     </body>
 
