@@ -2,7 +2,7 @@
 $host = 'localhost:3306';
 $user = 'root';
 $pass = '';
-$banco = 'amigopet';
+$banco = 'protetor';
 $conexao = new mysqli($host, $user, $pass, $banco);
 
 if (mysqli_connect_error()) {
