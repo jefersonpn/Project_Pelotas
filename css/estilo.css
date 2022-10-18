@@ -1,0 +1,176 @@
+/*------------------------------------------*/
+/*-------------- GLOBAL  -------------------*/
+/*------------------------------------------*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+/*------------------------------------------*/
+/*--------------- HOME ---------------------*/
+/*------------------------------------------*/
+
+.container_home {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.container_home img,
+.container_home div {
+    padding: 10px
+}
+
+.container_home {
+    margin-left: 162px;
+    margin-top: 30px;
+}
+
+.container_home1 img,
+.container_home1 div {
+    margin: 20px;
+}
+
+.container_home1 {
+    margin-left: 170px;
+    margin-top: 10px;
+}
+
+.container_home2 img,
+.container_home2 div {
+    display: flexbox;
+    display: inline-block;
+}
+
+.container_home2 {
+    margin-top: 30px;
+    margin-bottom: 100px;
+    margin-left: 170px;
+}
+
+.container_home2 img {
+    margin-top: auto;
+    margin-left: 80px;
+    width: 290px;
+}
+
+/*------------------------------------------*/
+/*-------------- SOBRE ---------------------*/
+/*------------------------------------------*/
+
+.container_sobre div {
+    display: flexbox;
+    display: inline-block;
+    margin-left: 140px;
+    margin-top: 20px;
+}
+
+.container_sobre img {
+    margin-left: 140px;
+}
+
+.container_sobre {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+
+.container_sobre1 div {
+    display: flexbox;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.container_sobre1 img {
+    margin-left: 10px;
+    width: 250px;
+}
+
+.container_sobre1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 235px;
+}
+
+.container_sobre2 div {
+    display: flexbox;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.container_sobre2 img {
+    margin-left: 140px;
+    width: 250px;
+}
+
+.container_sobre2 {
+    margin-top: 30px;
+    margin-bottom: 100px;
+    margin-left: 190px;
+}
+
+/*------------------------------------------*/
+/*---------------- PARCEIROS ----------------*/
+/*------------------------------------------*/
+
+.container_ParceiroHome {
+    max-width: 600px;
+    display: flex;
+    margin-left: 270px;
+    background: tomato;
+}
+
+.item {
+    flex: 1;
+    margin: 10px;
+    white-space: nowrap;
+}
+
+.itemHome {
+    margin-left: 50px;
+}
+
+/*------------------------------------------*/
+/*----------- BOTÃO PADRÃO -----------------*/
+/*------------------------------------------*/
+
+.button {
+
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+    color: #FFFFFF;
+    background: #009C8C;
+    border-radius: 7px;
+    padding: 12px;
+}
+
+/*------------------------------------------*/
+/*-------- POSIÇÃO DOS ELEMENTOS -----------*/
+/*------------------------------------------*/
+
+.posicao_padrao {
+    margin-top: 50px;
+    margin-left: 330px;
+    margin-bottom: 50px;
+
+}
+
+/*------------------------------------------*/
+/*---------- POSIÇÕES PARCEIROS ------------*/
+/*------------------------------------------*/
+
+.imagem_banner {
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-bottom: 5px;
+}
+
+.paragrafo_especial {
+    margin-left: 35px;
+}
+
+.texto_parceiro {
+    margin-left: 275px;
+    margin-bottom: 50px;
+}

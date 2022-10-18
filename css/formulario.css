@@ -1,0 +1,66 @@
+/*------------------------------------------*/
+/*-------- FORMULARIO CONTATO --------------*/
+/*------------------------------------------*/
+
+.container_contato {
+    margin-left: 350px;
+    margin-bottom: 100px;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 130px;
+}
+
+textarea {
+    padding: 10px;
+    border: 1px solid #33333349;
+    width: 300px;
+    color: #999999;
+    width: 400px;
+    height: 150px;
+    max-width: 300px;
+}
+
+
+/*------------------------------------------*/
+/*-------- FORMULARIO DE LOGIN -------------*/
+/*------------------------------------------*/
+
+.container_login {
+    text-align: center;
+    width: 300px;
+    height: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #FF6315;
+    margin-top: 50px;
+    margin-bottom: 130px;
+    padding-top: 20px;
+
+}
+
+.link {
+    font-size: 12px;
+    font-family: 'open sans';
+}
+
+#button {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+    color: #FFFFFF;
+    background: #FF6315;
+    border-radius: 7px;
+    padding: 12px;
+}
+
+/*------------------------------------------*/
+/*-------- FORMULARIO DE LOGIN -------------*/
+/*------------------------------------------*/
+
+.container_cadastro {
+    text-align: left;
+    margin-left: 350px;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 130px;
+}

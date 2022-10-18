@@ -1,0 +1,161 @@
+/*------------------------------------------*/
+/*------------ CATEGORIA -------------------*/
+/*------------------------------------------*/
+
+.container_categoria {
+	max-width: 300px;
+	display: flex;
+	/*margin-bottom: 5px; */
+}
+
+.itemCat1 {
+	flex: 1;
+	margin: 10px;
+	margin-top: 50px;
+}
+
+.itemCat {
+	flex: 1;
+	margin: 20px;
+}
+
+/*------------------------------------------*/
+/*------- SOLICITAR DOAÇÃO -----------------*/
+/*------------------------------------------*/
+
+/* Flex Container */
+.container_solicitar {
+	max-width: 800px;
+	display: flex;
+	margin-right: 500px;
+}
+
+.itemSolicitar1 {
+	margin-top: 20px;
+	flex: 1;
+	white-space: nowrap;
+}
+
+.itemSolicitar {
+	flex: 1;
+	margin: 10px;
+	white-space: nowrap;
+}
+
+
+/*------------------------------------------*/
+/*--------- MINHAS DOAÇÕES -----------------*/
+/*------------------------------------------*/
+
+.minhas_doacoes {
+	max-width: 800px;
+	display: flex;
+	margin-right: 500px;
+	white-space: nowrap;
+}
+
+.item_doacoes {
+	flex: 1;
+	margin: 10px;
+
+}
+
+.item_doacoes1 {
+	flex: 1;
+	margin: 20px;
+}
+
+/*------------------------------------------*/
+/*--------- ESCOLHE DOAÇÕES ----------------*/
+/*------------------------------------------*/
+
+#centraliza_titulo {
+	margin-left: 50px;
+}
+
+.container_doacao {
+	max-width: 700px;
+	display: flex;
+	margin-bottom: 300px;
+}
+
+.item_escolhe {
+	margin-left: 10px;
+	flex: 1;
+	white-space: nowrap;
+}
+
+.item_escolhe1 {
+	margin-top: 10px;
+	margin-left: 50px;
+	flex: 1;
+}
+
+img {
+	margin-left: 40px;
+}
+
+/*------------------------------------------*/
+/*------- AMIGOPET - PRINCIPAL -------------*/
+/*------------------------------------------*/
+
+.container_amigoPet {
+	max-width: 500px;
+	display: flex;
+	margin-bottom: 50px;
+	margin-left: 200px;
+	margin-top: 20px;
+}
+
+.item_amigopet {
+	margin-left: 10px;
+	flex: 1;
+	white-space: nowrap;
+}
+
+.item_amigopet1 {
+	margin-top: 10px;
+	margin-left: 50px;
+	flex: 1;
+	white-space: nowrap;
+}
+
+img {
+	margin-left: 20px;
+}
+
+/*SEGUNDA PARTE*/
+.posicao_padraopet{
+	margin-top: 50px;
+    margin-left: 220px;
+    margin-bottom: 10px;
+	white-space: nowrap;
+}
+
+/* container das doações ativas */
+.container_amigoPet1 {
+	max-width: 500px;
+	display: flex;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+/* container dos parceiros */
+.container_parceiropet img,
+.container_parceiropet div {
+    margin: 20px;
+}
+
+.container_parceiropet {
+    margin-left: 225px;
+    margin-top: 10px;
+}
+
+/*TERCEIRA PARTE*/
+.posicao_padraopet1{
+	margin-top: 50px;
+    margin-left: 220px;
+    margin-bottom: 50px;
+	white-space: nowrap;
+}

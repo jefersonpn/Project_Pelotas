@@ -1,0 +1,133 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+/*------------------------------------------*/
+/*-------- ESTILO DE TEXTO -----------------*/
+/*------------------------------------------*/
+
+p {
+    color: #333333;
+    font-size: 15px;
+}
+
+/*------------------------------------------*/
+/*-------- ESTILO DE TÍTULO E TEXTOS -------*/
+/*------------------------------------------*/
+
+h3 {
+    color: #FF6315;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+p {
+    font-family: 'open sans', sans-serif;
+    font-size: 15px;
+}
+
+h4 {
+    color: #333;
+    font-size: 17px;
+}
+
+/*------------------------------------------*/
+/*-------- POSIÇÃO DOS ELEMENTOS -----------*/
+/*------------------------------------------*/
+
+.posicao_padrao {
+    margin-top: 50px;
+    margin-left: 330px;
+    margin-bottom: 50px;
+}
+
+.posicao_padraopc {
+    margin-top: 50px;
+    margin-left: 370px;
+    margin-bottom: 30px;
+}
+
+/*------------------------------------------*/
+/*------------ BOTÃO PADRÃO ----------------*/
+/*------------------------------------------*/
+
+#button {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+    color: #FFFFFF;
+    background: #FF6315;
+    border-radius: 7px;
+    padding: 12px;
+
+}
+
+/* BOTÃO ESPECIAL */
+#button_doar {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+    color: #FFFFFF;
+    background: #FF6315;
+    border-radius: 7px;
+    padding: 12px;
+    margin-left: 300px;
+}
+
+/*------------------------------------------*/
+/*------- CAMPO DE BUSCA PADRÃO ------------*/
+/*------------------------------------------*/
+
+/* Elemento pai da busca */
+#busca {
+    margin: 0 auto;
+    padding: 0;
+    float: right;
+    margin-top: 20px;
+    margin-right: 100px;
+}
+
+/* Mexe onde pesquisa*/
+#txtbusca {
+    border: 0px solid #222;
+    background: rgba(226, 226, 226, 0.809);
+    width: 200px;
+    height: 23px;
+    margin: 0 auto;
+    padding: 5px 0 5px 5px;
+    float: left;
+    /*  posição do campo */
+    line-height: 36px;
+    /* altura da linha */
+}
+
+/* Botão da pesquisa */
+#btnBusca {
+    background: #FF6315;
+    position: relative;
+    border: 0px solid #222;
+    color: #FFF;
+    margin: 0 auto;
+    padding: 10px;
+    border: 0 none;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*------------------------------------------*/
+/*------- TODOS LABEL COMO ESTILO ----------*/
+/*------------------------------------------*/
+
+label {
+    color: #333;
+}
+
+/*------------------------------------------*/
+/*---------- BOTÕES DE EDITAR --------------*/
+/*------------------------------------------*/
+
+#editar {
+    margin-top: 15px;
+}
