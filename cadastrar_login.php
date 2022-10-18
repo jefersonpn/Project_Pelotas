@@ -84,7 +84,7 @@ include_once("conectar.php");
 
     <div class="notification is-success">
       <p>Cadastro efetuado!</p>
-      <p>Faça login informando o seu usuário e senha <a href="login.php">aqui</a></p>
+      <p>Faça login informando o seu usuário e senha <a href="login.php?title=login">aqui</a></p>
     </div>
     <div class="notification is-info">
       <p>O usuário escolhido já existe. Informe outro e tente novamente.</p>
