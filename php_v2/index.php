@@ -22,7 +22,7 @@
       ração,<br>casinha e outras coisas necessárias para o
       bem-estar dos pets.</p><br><br>
 
-    <a href="cadastrar_login.php?title=cadastrar" class="button">Quero me Cadastrar</a>
+    <a href="php_v2/cadastrar_login.php?title=cadastrar" class="button">Quero me Cadastrar</a>
 
   </div>
 
@@ -68,9 +68,8 @@
 <!-- FIM HOME -->
 
 
-    <!--INICIO RODAPE -->
+<!--INICIO RODAPE -->
 
-        <?php include('rodape.php'); ?>
+<?php include('rodape.php'); ?>
 
-    <!--FIM RODAPE -->
-
+<!--FIM RODAPE -->
