@@ -12,12 +12,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         $email = $mysqli->real_escape_string($_POST['email']);
         $senha = $mysqli->real_escape_string($_POST['senha']);
 
-        $sql_code = "SELECT protetor.email, protetor.senha_protetor, doador.email, doador.senha_doador, parceiro.email, parceiro.senha_parceiro 
-        FROM protetor
-        INNER JOIN doador
-        ON protetor.id_protetor = doador.id_doador
-        INNER JOIN parceiro 
-        ON doador.id_doador != parceiro.id_parceiro";
+        $sql_code = "";
         
         $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
 
