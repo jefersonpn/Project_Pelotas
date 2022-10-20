@@ -13,34 +13,38 @@
 
         <h3>Realize seu Cadastro Parceiro ;)</h3>
 
-        <form method="post" action=""><br><br>
-           
-        <!-- parceiro -->
-        <div>
-            <label>Nome Fantasia</label>
-            <input type="text" name="nomefantasia3" placeholder="Nome Fantasia"><br><br>
+        <form method="post" action="form_cad_parceiro.php">
 
-            <label>CNPJ</label>
-            <input type="text" name="cnpj3" placeholder="Digite seu CNPJ"><br><br>
+            <label>Nome Fantasia
+            <input type="text" name="nomefantasia" placeholder="Nome Fantasia" required><br><br>
+            </label>
 
-            <label>E-mail</label>
-            <input type="text" name="email3" placeholder="Digite seu email"><br><br>
+            <label>E-mail
+            <input type="text" name="email" placeholder="Digite seu email" required><br><br>
+            </label>
 
-            <label>Telefone</label>
-            <input type="text" name="telefone3" placeholder="Digite seu telefone"><br><br>
+            <label>Telefone
+            <input type="text" name="telefone" placeholder="Digite seu telefone" required><br><br>
+            </label>
 
-            <label>Cidade</label>
-            <input type="text" name="cidade3" placeholder="Digite a sua cidade"><br><br>
+            <label>Cidade
+            <input type="text" name="cidade" placeholder="Digite a sua cidade" required><br><br>
+            </label>
 
-            <label>Login</label>
-            <input type="text" name="loginpa3" placeholder="Digite seu login"><br><br>
+            <label>CNPJ
+            <input type="text" name="cnpj" placeholder="Digite seu cnpj" required><br><br>
+            </label>
 
-            <label>Senha</label>
-            <input type="text" name="senha3" placeholder="Digite a senha"><br><br>
-        </div>
+            <label>Login
+            <input type="text" name="login" placeholder="Digite seu login" required><br><br>
+            </label>
 
-        <div id="form_botao_cadastrar"><input type="submit" name="enviar" value="Cadastrar"><br><br>
-        </div>
+            <label>Senha
+            <input type="text" name="senha" placeholder="Digite a senha" required><br><br>
+            </label>
+
+            <br><button type="submit" name="enviar" value="1" id="form_botao_cadastrar">Cadastrar Protetor</button>
+			&nbsp&nbsp&nbsp<a href="index.html"><input type="button" value="Voltar"></a>
 
         </form> 
 
@@ -49,3 +53,26 @@
         <?php include('rodape.php'); ?>
 
     <!--FIM RODAPE -->
+     
+     <!-- Conexão php -->
+<?php
+    include_once("conectar.php");
+    if(isset($_POST['Post'])){
+        $nomefantasia=$_POST['nome'];
+        $email=$_POST['email'];
+        $telefone=$POST['telefone'];
+        $cidade=$_POST['cidade'];
+        $login=$_POST['login'];
+        $senha=$_POST['senha'];
+        //$imagem
+        $cnpj=$_POST['cnpj'];
+
+        $sql = "INSERT INTO parceiro (nomefantasia, email, telefone, cidade, login_parceiro, senha_parceiro, cnpj) VALUES ('$nomefantasia','$email','$telefone','$cidade', '$login', '$senha', NOW(), '$cnpj')";
+
+        mysqli_query($conexao,$sql);
+        mysqli_close($conexao);
+        header('Location: lista_parceiro.php');
+    }
+?>
+     
+     
