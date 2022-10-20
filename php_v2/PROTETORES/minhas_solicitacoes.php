@@ -3,71 +3,126 @@
 ?>
 
 <!--INICIO CABEÇALHO-->
-    <?php include('cabecalho_protetor.php'); ?>
+    <?php include('cabecalho_doador.php'); ?>
 <!--FIM CABEÇALHO-->
 
 
+    <!-- TESTE ABAS -->
 
-    <!-- INICIO SOLICITAÇÃO DE OBJETOS -->
+    <!-- INICIO PARCEIROS ABAS || AQUI COMEÇA A PROGRAMAÇÃO DE STATUS (PHP)-->
 
-    <!-- busca por solicitações -->
-    <div id='busca'>
-        <form action="busca.php" method="GET">
-            <input type="text" name="doacoes" id="txtbusca" placeholder="Faça sua Busca">
-            <input id="btnBusca" type="submit" value="Ok" />
-        </form>
+    <div class="posicao_padraopc">
+        <!-- Alinhamento do título -->
+        <h3>Área do Doador</h3>
+    </div>
 
-        <!-- teste após o back (.js de busca) 
-        <script>
-        var filtro = document.getElementById('filtro-nome');
-        var tabela = document.getElementById('lista');
-        filtro.onkeyup = function() {
-            var nomeFiltro = filtro.value;
-            for (var i = 1; i < tabela.rows.length; i++) {
-                var conteudoCelula = tabela.rows[i].cells[1].innerText;
-                var corresponde = conteudoCelula.toLowerCase().indexOf(nomeFiltro) >= 0;
-                tabela.rows[i].style.display = corresponde ? '' : 'none';
-            }
-        };
-    </script> -->
+    <div class="container_parceiro">
+
+        <!-- Elemento pai -->
+        <nav class="nav_tabs">
+
+            <ul>
+                <!-- ABA DE ANDAMENTO-->
+                <li>
+                    <!-- selecionar as opções -->
+                    <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
+
+                    <!-- Título das abas -->
+                    <label for="tab1" class="tab_label">Solicitações Finalizadas</label>
+
+                    <div class="tab-content">
+
+                        <div class="text">
+                            <div class="item">
+                                <img class="logo" alt="AMIGO PET" width="150px"
+                                    src="img/parceiro_interno/amigopet_parceiro05.png" />
+                            </div>
+
+                            <div class="item">
+                                <p><br>
+                                    Roupa para Cachorro
+                                </p><br>
+
+                                <p>
+                                    Solicitante(a): Luis
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <button id="button" type="submit">Solicitações Finalizada</button>
+                            </div>
+
+                        </div>
+
+                        <hr>
+                        <!--Linha para separar outras doações-->
+                </li>
+
+                <li>
+                    <!-- ABA DE PENDENTES -->
+                    <input type="radio" name="tabs" class="rd_tab" id="tab2">
+                    <label for="tab2" class="tab_label">Pendentes</label>
+
+                    <div class="tab-content">
+
+                        <div class="text">
+
+                            <div class="item">
+                                <img class="logo" alt="AMIGO PET" width="100px"
+                                    src="img/parceiro_interno/amigopet_parceiro01.png" />
+                            </div>
+
+                            <div class="item">
+                                <p>
+                                    Roupa Cirúrgica
+                                </p><br>
+
+                                <p class="texto_doador">Solicitante(a): Luis</p>
+                            </div>
+
+                            <div class="item">
+                                <button id="button" type="submit">Aguardando Busca</button>
+                            </div>
+
+                        </div>
+
+                        <hr>
+                        <!--Linha para separar outras doações-->
+
+                        <div class="text">
+
+                            <div class="item">
+                                <img class="logo" alt="AMIGO PET" width="100px"
+                                    src="img/parceiro_interno/amigopet_parceiro01.png" />
+                            </div>
+
+                            <div class="item">
+                                <p>
+                                    Ração 1,5kg
+                                </p><br>
+
+                                <p class="texto_doador">Solicitante(a): Tais</p>
+                            </div>
+
+                            <div class="item">
+                                <button id="button" type="submit">Não Buscou</button>
+                            </div>
+
+                        </div>
+
+                        <hr>
+                        <!--Linha para separar outras doações-->
+
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
 
     </div>
 
-    <div class="posicao_padrao">
 
-        <div id="centraliza_titulo">
-            <h3>MINHAS SOLICITAÇÕES</h3><br>
-
-            <p>
-                Você pode solicitar qualquer uma das doações, a única regra
-                é você ir até o parceiro<br> e retirar no local em até 3 dias.
-                Caso não busque, o produto é descartado.
-            </p>
-        </div><br><br>
-
-        <section class="container_doacao">
-
-            <div class="item_escolhe">
-                <img alt="AMIGO PET" id="teste" width="150px" src="img/parceiro_interno/amigopet_parceiro05.png" />
-            </div>
-
-            <div class="item_escolhe">
-                <h3>Roupa de Cachorro</h3><br>
-
-                <p>
-                    Roupa do Stitch super nova, não serve mais<br>
-                    no meu doguinho.
-                </p><br><br>
-            </div>
-
-            <div class="item_escolhe1">
-                <a href="doacao_solicitar.html" id="button">Aguardando Doação</a>
-            </div>
-
-        </section>
-    </div>
-
-    <!-- FIM SOLICITAÇÃO DE OBJETOS -->
+     <!-- FIM MINHAS DOAÇÕES -->
 
 
     <!--INICIO RODAPE -->
