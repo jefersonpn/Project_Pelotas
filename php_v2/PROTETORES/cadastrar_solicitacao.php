@@ -79,10 +79,10 @@
 <?php
     include_once("conectar.php");
     if(isset($_POST['Post'])){
-        $descricao=$_POST['nome'];
-        $motivo=$_POST['email'];
-        $quantidade=$POST['telefone'];
-        $categoria=$_POST['cidade'];
+        $descricao=$_POST['descricao'];
+        $motivo=$_POST['motivo'];
+        $quantidade=$POST['quantidade'];
+        $categoria=$_POST['categoria'];
       //$imagem
 
         $sql = "INSERT INTO doacao_solicitacao (descricao, motivo, quantidade, categoria, ativo, fk_categoria_id, fk_parceiro_id, fk_protetor_id, fk_doador_id) VALUES ('$descricao','$motivo','$quantidade','$categoria', NOW(), '$imagem')";
