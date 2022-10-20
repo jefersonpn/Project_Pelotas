@@ -66,7 +66,7 @@
                     <p>Parceiros</p>
                     <select name="parceiro" required>
                         <?php 
-                            $categoria = "SELECT * FROM protetor WHERE nomefantasia LIKE '%%' ";
+                            $categoria = "SELECT * FROM parceiro";
                             $result = mysqli_query($mysqli, $nomefantasia);
                             
                             while($id_parceiro=mysqli_fetch_array($result)){
@@ -95,3 +95,20 @@
         <?php include('rodape.php'); ?>
 
     <!--FIM RODAPE -->
+
+<?php
+    include_once("conectar.php");
+    if(isset($_POST['Post'])){
+        $descricao=$_POST['descricao'];
+        $motivo=$_POST['motivo'];
+        $quantidade=$POST['quantidade'];
+        $categoria=$_POST['categoria'];
+        //$imagem
+
+        $sql = "INSERT INTO doacao_voluntaria (descricao, motivo, ativo, quantidade, categoria, fk_parceiro_id, fk_protetor_id, fk_doador_id, fk_categoria_id) VALUES ('$descricao','$motivo','$quantidade','$categoria', NOW(), '$imagem')";
+
+        mysqli_query($conexao,$sql);
+        mysqli_close($conexao);
+        header('Location: lista_doador.php');
+    }
+?>
