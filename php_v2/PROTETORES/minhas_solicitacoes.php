@@ -3,17 +3,17 @@
 ?>
 
 <!--INICIO CABEÇALHO-->
-    <?php include('cabecalho_doador.php'); ?>
+    <?php include('cabecalho_protetor.php'); ?>
 <!--FIM CABEÇALHO-->
 
 
     <!-- TESTE ABAS -->
 
-    <!-- INICIO PARCEIROS ABAS || AQUI COMEÇA A PROGRAMAÇÃO DE STATUS (PHP)-->
+    <!-- STATUS (PHP)-->
 
     <div class="posicao_padraopc">
         <!-- Alinhamento do título -->
-        <h3>Área do Doador</h3>
+        <h3>Área do Protetor</h3>
     </div>
 
     <div class="container_parceiro">
