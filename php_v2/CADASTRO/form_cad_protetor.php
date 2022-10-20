@@ -13,7 +13,7 @@
 
         <h3>Realize seu Cadastro Protetor ;)</h3>
 
-        <form method="post" action="cadastro_aluno_teste.php">
+        <form method="post" action="form_cad_protetor.php">
 
             <label>Nome
             <input type="text" name="nome" placeholder="Nome Completo" required><br><br>
