@@ -1,5 +1,25 @@
 <?php 
     include ("conectar.php");
+    
+    // aqui vai imagem do produto que o doador quer doar
+    $msg = false;
+
+    if(isset($_FILES['imagem'])){
+
+        $extensao = strtolower(substr($_FILES['imagem']['name'], -4)); // extensão
+        $novo_nome = md5(time()) . $extensao; // nome arquivo
+        $diretorio = "upload/"; // diretorio
+
+        move_uploaded_file($_FILES['imagem']['tmp_name'], $diretorio.$novo_nome); //efetua o upload
+
+        $sql_code = "INSERT INTO doacao_solicitacao (id_solicitacao, descricao, motivo, quantidade, categoria, ativo, fk_parceiro, fk_doador, fk_protetor, fk_categoria, data_cadastro, imagem) VALUES (null, '$novo_nome', NOW())";
+
+        if($mysqli->query($sql_code))
+            $msg = "Arquivo enviado com Sucesso!";
+        else
+            $msg = "Falha ao enviar aquivo.";    
+    }
+
 ?>
 
 <!--INICIO CABEÇALHO-->
