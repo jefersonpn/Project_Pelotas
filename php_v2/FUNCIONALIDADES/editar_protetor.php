@@ -12,7 +12,7 @@
 
         $nome=$_POST['nome'];
         $email=$_POST['email'];
-        $telefone=$POST['telefone'];
+        $telefone=$_POST['telefone'];
         $cidade=$_POST['cidade'];
         $login=$_POST['login'];
         $senha=$_POST['senha'];
