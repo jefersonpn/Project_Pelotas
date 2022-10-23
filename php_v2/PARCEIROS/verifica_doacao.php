@@ -80,11 +80,9 @@
         $categoria=$_POST['fk_categoria_id'];
         //$imagem=$_POST[''];
         
-            $sql="INSERT INTO doacao_voluntaria (id_doacao, descricao, motivo, ativo, quantidade, data_cadastro, fk_parceiro_id, fk_protetor_id, fk_doador_id, fk_categoria_id, imagem) VALUES('$id_doacao', '$descricao', '$motivo', '$ativo', '$quantidade', NOW(), '$parceiro', '$protetor', '$doador', '$categoria', '#imagem')";
+            $sql="SELECT * FROM doacao_voluntaria";
             mysqli_query($conexao,$sql);
-            $sql="UPDATE livro SET status=0 WHERE id=$livro";
-            mysqli_query($conexao,$sql);
-            header('Location: reserva.php');
+            header('Location: verifica_doacao.php');
     }
 
     mysqli_close($conexao)
