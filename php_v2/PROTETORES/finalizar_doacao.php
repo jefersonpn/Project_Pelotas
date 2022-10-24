@@ -8,6 +8,7 @@
 
 
     <!-- INICIO SOLICITAÇÃO DE DOAÇÃO -->
+    <!-- ESSA PÁGINA O SOLICITANTE CLICA NA DOAÇÃO QUE DESEJA, ENTÃO ESSA TELA TEM QUE EXISTIR -->
 
     <div class="posicao_padrao">
 
