@@ -9,7 +9,7 @@
 
     <!-- TESTE ABAS -->
 
-    <!-- STATUS (PHP)-->
+    <!-- STATUS 1,2,3,4... -->
 
     <div class="posicao_padraopc">
         <!-- Alinhamento do título -->
@@ -48,8 +48,8 @@
                                 </p>
                             </div>
 
-                            <div class="item">
-                                <button id="button" type="submit">Solicitações Finalizada</button>
+                            <div class="item"><!-- no css visualizar o tamanho da aba aqui -->
+                                <button id="button" type="submit">Solicitação Finalizada</button>
                             </div>
 
                         </div>
