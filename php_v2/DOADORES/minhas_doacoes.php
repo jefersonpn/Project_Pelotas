@@ -22,7 +22,10 @@
         <nav class="nav_tabs">
 
             <ul>
-                <!-- ABA DE ANDAMENTO-->
+                <!-- Visualiza doações finalizadas -->
+                <!-- select * from doacao_voluntaria where ativo = 'N' --> 
+                
+                
                 <li>
                     <!-- selecionar as opções -->
                     <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
@@ -60,6 +63,10 @@
 
                 <li>
                     <!-- ABA DE PENDENTES -->
+                    <!-- Visualiza doações em andamento -->
+                    <!-- select * from doacao_voluntaria where ativo = 'S' --> 
+                    <!-- talvez tenha que criar status 1 = ativo, 2 = aguardando, 3 = finalizado, 4 = não buscou doação...  -->
+                    
                     <input type="radio" name="tabs" class="rd_tab" id="tab2">
                     <label for="tab2" class="tab_label">Pendentes</label>
 
@@ -80,7 +87,7 @@
                                 <p class="texto_doador">Solicitante(a): Luis</p>
                             </div>
 
-                            <div class="item">
+                            <div class="item"> <!-- exemplo de status, criei botão, não sei se teria como deixar assim, mas sem levar a nenhuma página -->
                                 <button id="button" type="submit">Aguardando Busca</button>
                             </div>
 
