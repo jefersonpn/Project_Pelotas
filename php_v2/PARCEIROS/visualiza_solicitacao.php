@@ -15,7 +15,8 @@
 
         <p>
             Caro parceiro, este solicitante pode ir até o seu estabelicimento? Verifique a doação,<br>
-            solicitante e o doador.<br><br>
+            solicitante e o doador. Assim que doador levar, o notifique que se o protetor não buscar em<br>
+            até 3 dias, a empresa notifica o doador. Caso não busque, será descartado.<br><br>
         </p>
 
         <section class="container_solicitar">
@@ -63,6 +64,7 @@
             </div>
         </section>
         <br><br>
+        <!-- Ao clicar no botão, o status do doador e protetor devem mudar para que o doador leve até a agropecuária e protetor vá buscar -->
         <a href="##" id="button_doar">Aceitar Solicitação</a>
 
     </div>
