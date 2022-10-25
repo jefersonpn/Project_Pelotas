@@ -9,7 +9,7 @@
 
     <!-- TESTE ABAS -->
 
-    <!-- STATUS 1,2,3,4... -->
+    <!-- talvez tenha que criar status 1 = ativo, 2 = aguardando, 3 = finalizado, 4 = não buscou doação...  -->
 
     <div class="posicao_padraopc">
         <!-- Alinhamento do título -->
