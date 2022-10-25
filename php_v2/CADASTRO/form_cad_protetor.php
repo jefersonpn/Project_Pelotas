@@ -12,6 +12,13 @@
  <div class="container_cadastro">
 
         <h3>Realize seu Cadastro Protetor ;)</h3>
+	 
+	 	<form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
+                    <label>
+                        <p>Foto</p> <br><input type="file" name="image" />
+                        <!-- <input type="submit" id="button_upload" value="Enviar"
+                                name="envia" /> -->
+                </form><br><br><br>
 
         <form method="post" action="form_cad_protetor.php">
 
