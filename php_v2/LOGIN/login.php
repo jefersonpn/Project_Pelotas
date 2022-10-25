@@ -47,63 +47,37 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
 <!-- INICIO LOGIN -->
 
-<div class="container_login">
+    <div class="container_login">
 
-  <h3>AMIGOPET</h3>
+        <form method="post" action="">
 
-  <?php
-                    if(isset($_SESSION['nao_autenticado'])):
-                    ?>
-  <div class="notification is-danger">
-    <p>ERRO: Usuário ou senha inválidos.</p>
-  </div>
+            <h3>AMIGOPET</h3>
 
-  <?php
-                    endif;
-                    unset($_SESSION['nao_autenticado']);
-        ?>
+            <p class="link">Faça o seu login<br><br><br>
 
-  <form action="login.php" method="POST">
-    <div class="field">
-      <div class="control">
-        <input name="usuario" name="text" placeholder="Seu usuário" autofocus="">
-      </div>
+                Ainda não tem conta?
+                <a href="cad_login.html">Cadastre-se</a>
+            </p><br><br>
+
+            <p>
+                <label for="email_login">E-mail&nbsp;</label>
+                <input id="email_login" name="email_login" required="required" type="text"
+                    placeholder="contato@amigopet.com" /><br><br>
+            </p>
+
+            <p>
+                <label for="senha_login">CPF&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" />
+            </p><br><br>
+
+            <p>
+                <input class="button" type="submit" value="Logar" />
+            </p><br>
+
+        </form>
     </div>
 
-    <div class="field">
-      <div class="control">
-        <input name="senha" type="password" placeholder="Sua senha">
-      </div>
-    </div>
-
-    <div class="field">
-      <a href="cadastro.php">Cadastrar</a>
-    </div>
-
-    <button type="submit">Entrar</button>
-  </form>
-
-  <!-- <p class="link">Faça o seu login<br><br><br>
-
-            Ainda não tem conta?
-            <a href="cadastrar_login.php">Cadastre-se</a>
-        </p><br><br>
-
-        <form action="" method="POST">
-            <p>
-                <label>E-mail</label>
-                <input type="text" name="email">
-            </p>
-            <p>
-                <label>Senha</label>
-                <input type="password" name="senha">
-            </p>
-            <p>
-                <button type="submit">Entrar</button>
-            </p>
-        </form> -->
-
-  <!-- FIM LOGIN -->
+    <!-- FIM LOGIN -->
 
   <!--INICIO RODAPE-->
   <footer>
