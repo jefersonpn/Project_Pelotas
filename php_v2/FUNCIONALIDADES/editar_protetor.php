@@ -16,6 +16,7 @@
         $cidade=$_POST['cidade'];
         $login=$_POST['login'];
         $senha=$_POST['senha'];
+        //$imagem=['imagem'];
         $sql="UPDATE protetor SET nome = '$nome', email = '$email', telefone = '$telefone', cidade = '$cidade', login_protetor = '$login', senha_protetor = '$senha'";
          mysqli_query($conexao,$sql);
     }elseif(isset($_POST['Deleted'])){
