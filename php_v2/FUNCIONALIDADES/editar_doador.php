@@ -48,6 +48,7 @@
                 $sql = "SELECT * FROM doador = $editid";
                 $resultado=mysqli_fetch_array(mysqli_query($conexao,$sql));
 
+                //$imagem=$resultado['imagem'];
                 $nome=$resultado['nome'];
                 $email=$resultado['email'];
                 $telefone=$resultado['telefone'];
@@ -58,6 +59,7 @@
                 echo "<div id='editar_doador'>";
                 echo "<p>Edite as informações do doador abaixo: </p>";
                 echo "<form action'editar_doador.php' method='post'>";
+                echo "<br><label><p>Foto:</p><br><input type="file" name="image" required></label><br>";
                 echo "<br><label>Nome:<input type='text' name='nome' placeholder='$nome' required></label><br>";
                 echo "<br><label>Email:<input type='text' name='email' placeholder='$email' required></label><br>";
                 echo "<br><label>Telefone:<input type='text' name='telefone' placeholder='$telefone' required></label><br>";
