@@ -90,8 +90,9 @@ include_once("conectar.php");
                         <option value="aguardando">Aguardando Protetor</option>
                         <option value="nao_buscou">Não buscou Doação</option>
                         <option value="buscou">Buscou Doação</option>
+                        <option value="descartar">Descarte</option>
    
-                        <!-- talvez tenha que criar status 1 = buscou, 2 = aguardando, 3 = finalizado, 4 = não buscou doação...  -->
+                        <!-- talvez tenha que criar status 1 = buscou, 2 = aguardando, 3 = finalizado, 4 = não buscou doação, 5 = descarte...  -->
                         <!-- select * from doacao_voluntaria where ativo = "..." -->
                         <?php 
                             $## = "SELECT * FROM ";
