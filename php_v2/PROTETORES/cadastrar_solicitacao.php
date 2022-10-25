@@ -11,6 +11,13 @@
             <h3>CADASTRE UMA SOLICITAÇÃO</h3><br><br>
 
             <form method="Post" action="doacao_doar.php">
+                
+                <form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
+                    <label>
+                        <p>Foto</p> <br><input type="file" name="image" />
+                        <!-- <input type="submit" id="button_upload" value="Enviar"
+                                name="envia" /> -->
+                </form><br><br><br>
 
                 <label>
                     <p>Nome</p> <br><input type="text" name="descricao" id="id_nome" placeholder="Nome do Objeto"
