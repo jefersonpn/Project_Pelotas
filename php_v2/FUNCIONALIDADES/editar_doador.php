@@ -16,6 +16,7 @@
         $cidade=$_POST['cidade'];
         $login=$_POST['login'];
         $senha=$_POST['senha'];
+        //$imagem=['imagem'];
         $sql="UPDATE doador SET nome = '$nome', email = '$email', telefone = '$telefone', cidade = '$cidade', login_doador = '$login', senha_doador = '$senha'";
          mysqli_query($conexao,$sql);
     }elseif(isset($_POST['Deleted'])){
