@@ -16,7 +16,7 @@
         $cidade=$_POST['cidade'];
         $login=$_POST['login'];
         $senha=$_POST['senha'];
-        //$imagem
+        //$imagem=['imagem'];
         $cnpj=$_POST['cnpj'];
 
         $sql="UPDATE parceiro SET nome = '$nome', email = '$email', telefone = '$telefone', cidade = '$cidade', login_parceiro = '$login', senha_parceiro = '$senha'";
