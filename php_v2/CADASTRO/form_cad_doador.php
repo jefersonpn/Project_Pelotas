@@ -14,6 +14,13 @@
         <h3>Realize seu Cadastro Doador ;)</h3>
 
         <form method="post" action=""><br><br>
+		
+		<form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
+                    <label>
+                        <p>Foto</p> <br><input type="file" name="image" />
+                        <!-- <input type="submit" id="button_upload" value="Enviar"
+                                name="envia" /> -->
+                </form><br><br><br>
 
     <!-- doador -->
         <form method="post" action="form_cad_doador.php">
