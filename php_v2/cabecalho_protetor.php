@@ -24,16 +24,16 @@
     <?php 
     switch ($_GET['title'])
 {
-    case '':
+    case 'home':
         echo "<title>Home - Amigo Pet</title>";
         break; 
-    case 'home':
+    case 'perfil':
         echo "<title>Perfil - Amigo Pet</title>";
         break;
-    case 'contato':
+    case 'solicitacaoes':
         echo "<title>Minhas Solicitações - Amigo Pet</title>";
         break;
-    case 'sobre':
+    case 'sair':
         echo "<title>Sair - Amigo Pet</title>";
         break;
 }
