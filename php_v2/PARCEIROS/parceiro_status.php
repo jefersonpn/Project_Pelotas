@@ -90,13 +90,15 @@ include_once("conectar.php");
                         <option value="aguardando">Aguardando Protetor</option>
                         <option value="nao_buscou">Não buscou Doação</option>
                         <option value="buscou">Buscou Doação</option>
-
+   
+                        <!-- talvez tenha que criar status 1 = buscou, 2 = aguardando, 3 = finalizado, 4 = não buscou doação...  -->
+                        <!-- select * from doacao_voluntaria where ativo = "..." -->
                         <?php 
-                            $categoria = "SELECT * FROM categoria";
-                            $resultado = mysqli_query($mysqli, $categoria);
+                            $## = "SELECT * FROM ";
+                            $resultado = mysqli_query($mysqli, $##);
                             
                             while($id_categoria=mysqli_fetch_array($resultado)){
-                                $id=$id_categoria['id'];
+                                $id=$##['id'];
                                 $nome=$id_categoria['categoria'];
                                 echo "<option value='$id'>$nome</option>";
                             }
