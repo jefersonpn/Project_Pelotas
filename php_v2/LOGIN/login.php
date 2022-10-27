@@ -45,9 +45,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 <!--FIM CABEÇALHO-->
 
 
-<!-- INICIO LOGIN -->
-
-    <div class="container_login">
+<div class="container_login">
 
         <form method="post" action="">
 
@@ -76,6 +74,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
         </form>
     </div>
+
 
     <!-- FIM LOGIN -->
 
