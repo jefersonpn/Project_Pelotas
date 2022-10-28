@@ -1,9 +1,9 @@
 <?php 
-    include ("conectar.php");
+    include ("../conectar.php");
 ?>
 
 <!--INICIO CABEÇALHO-->
-<?php include('cabecalho.php'); ?>
+<?php include('../cabecalho.php'); ?>
 <!--FIM CABEÇALHO-->
 
 
@@ -12,14 +12,7 @@
  <div class="container_cadastro">
 
         <h3>Realize seu Cadastro Parceiro ;)</h3>
-	 
-	 	<form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
-                    <label>
-                        <p>Foto</p> <br><input type="file" name="image" />
-                        <!-- <input type="submit" id="button_upload" value="Enviar"
-                                name="envia" /> -->
-                </form><br><br><br>
-
+     
          <form method="post" action="form_cad_parceiro.php">
 
             <label>Nome Fantasia
@@ -50,19 +43,23 @@
             <input type="text" name="senha" placeholder="Digite a senha" required><br><br>
             </label>
 
+            <form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
+                    <label>
+                        <p>Foto</p> <br><input type="file" name="image" /><input type="submit" id="button_upload" value="Enviar" name="envia" /> 
+            </form><br><br><br><br>
+
             <br><button type="submit" name="enviar" value="1" id="form_botao_cadastrar">Cadastrar Protetor</button>
-			&nbsp&nbsp&nbsp<a href="index.html"><input type="button" value="Voltar"></a>
+            &nbsp&nbsp&nbsp<a href="index.html"><input type="button" value="Voltar"></a>
 
         </form> 
-    <!--INICIO RODAPE -->
 
-        <?php include('rodape.php'); ?>
-
-    <!--FIM RODAPE -->
+<!--INICIO RODAPE -->
+        <?php include('../rodape.php'); ?>
+<!--FIM RODAPE -->
 
      <!-- Conexão php -->
 <?php
-    include_once("conectar.php");
+    include_once("../conectar.php");
     if(isset($_POST['Post'])){
         $nomefantasia=$_POST['nome'];
         $email=$_POST['email'];
@@ -70,7 +67,7 @@
         $cidade=$_POST['cidade'];
         $login=$_POST['login'];
         $senha=$_POST['senha'];
-        //$imagem
+        //$imagem$_POST['imagem'];
         $cnpj=$_POST['cnpj'];
 
         $sql = "INSERT INTO parceiro (nomefantasia, email, telefone, cidade, login_parceiro, senha_parceiro, cnpj) VALUES ('$nomefantasia','$email','$telefone','$cidade', '$login', '$senha', NOW(), '$cnpj')";
