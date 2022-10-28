@@ -49,7 +49,6 @@
             </form><br><br><br><br>
 
             <br><button type="submit" name="enviar" value="1" id="form_botao_cadastrar">Cadastrar Protetor</button>
-            &nbsp&nbsp&nbsp<a href="index.html"><input type="button" value="Voltar"></a>
 
         </form> 
 
