@@ -39,8 +39,7 @@
         <form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
                     <label>
                         <p>Foto</p> <br><input type="file" name="image" />
-                        <!-- <input type="submit" id="button_upload" value="Enviar"
-                                name="envia" /> -->
+                        <input type="submit" id="button_upload" value="Enviar" name="envia" /> 
         </form><br><br><br><br>
 
         <br><button type="submit" name="enviar" id="button">Cadastrar Protetor</button>
@@ -65,9 +64,9 @@
         $cidade=$_POST['cidade'];
         $login=$_POST['login'];
         $senha=$_POST['senha'];
-        //$imagem=$_POST['imagem'];
+        $imagem=$_POST['imagem'];
 
-    $sql = "INSERT INTO protetor (nome, email, telefone, cidade, login_protetor, senha_protetor, data_cadastro) VALUES ('$nome','$email','$telefone','$cidade', '$login', '$senha', NOW())";
+    $sql = "INSERT INTO protetor (nome, email, telefone, cidade, login_protetor, senha_protetor, data_cadastro, imagem) VALUES ('$nome','$email','$telefone','$cidade', '$login', '$senha', NOW(), '$imagem')";
         mysqli_query($conexao,$sql);
         mysqli_close($conexao);
         header('Location: dashboard/painel_protetor.php');
