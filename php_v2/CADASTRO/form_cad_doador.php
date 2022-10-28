@@ -49,8 +49,7 @@
 		
 		
 
-            <br><button type="submit" name="enviar" value="1" id="form_botao_cadastrar">Cadastrar Doador</button>
-			&nbsp&nbsp&nbsp<a href="index.html"><input type="button" value="Voltar"></a>
+            <br><button type="submit" name="enviar" value="1" id="form_botao_cadastrar">Cadastrar Doador</button> 
 
         </form> 
 
@@ -70,9 +69,9 @@
         $cidade=$_POST['cidade'];
         $login=$_POST['login'];
         $senha=$_POST['senha'];
-        //$imagem=$_POST['imagem'];
+        $imagem=$_POST['imagem'];
 
-    $sql = "INSERT INTO doador (nome, email, telefone, cidade, login_doador, senha_doador, data_cadastro) VALUES ('$nome','$email','$telefone','$cidade', '$login', '$senha', NOW())";
+    $sql = "INSERT INTO doador (nome, email, telefone, cidade, login_doador, senha_doador, data_cadastro, $imagem) VALUES ('$nome','$email','$telefone','$cidade', '$login', '$senha', NOW(), '$imagem')";
         mysqli_query($conexao,$sql);
         mysqli_close($conexao);
         header('Location: dashboard/painel_doador.php');
