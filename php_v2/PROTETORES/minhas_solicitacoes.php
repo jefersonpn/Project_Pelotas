@@ -1,19 +1,19 @@
 <?php 
-    include ("conectar.php");
+    include ("../conectar.php");
 ?>
 
 <!--INICIO CABEÇALHO-->
-    <?php include('cabecalho_protetor.php'); ?>
+<?php include('../cabecalho.php'); ?>
 <!--FIM CABEÇALHO-->
 
 
     <!-- TESTE ABAS -->
 
-    <!-- talvez tenha que criar status 1 = ativo, 2 = aguardando, 3 = finalizado, 4 = não buscou doação...  -->
+    <!-- INICIO PARCEIROS ABAS || AQUI COMEÇA A PROGRAMAÇÃO DE STATUS (PHP)-->
 
     <div class="posicao_padraopc">
         <!-- Alinhamento do título -->
-        <h3>Área do Protetor</h3>
+        <h3>Área do Doador</h3>
     </div>
 
     <div class="container_parceiro">
@@ -48,8 +48,8 @@
                                 </p>
                             </div>
 
-                            <div class="item"><!-- no css visualizar o tamanho da aba aqui -->
-                                <button id="button" type="submit">Solicitação Finalizada</button>
+                            <div class="item">
+                                <button id="button" type="submit">Solicitações Finalizada</button>
                             </div>
 
                         </div>
@@ -125,8 +125,6 @@
      <!-- FIM MINHAS DOAÇÕES -->
 
 
-    <!--INICIO RODAPE -->
-
-        <?php include('rodape.php'); ?>
-
-    <!--FIM RODAPE -->
+<!--INICIO RODAPE -->
+        <?php include('../rodape.php'); ?>
+<!--FIM RODAPE -->
