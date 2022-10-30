@@ -11,9 +11,9 @@
 
 <div class="container_cadastro">
 
-  <h3>Realize seu Cadastro Parceiro ;)</h3>
+  <h3>Realize seu Cadastro Parceiro ;)</h3><br>
 
-  <form method="post" action="form_cad_parceiro.php" enctype="multipart/form-data">
+  <form method="post" action="insert_parceiro.php" enctype="multipart/form-data">
 
     <label>Nome Fantasia
       <input type="text" name="nomefantasia" placeholder="Nome Fantasia" required><br><br>
@@ -73,6 +73,6 @@
 
         mysqli_query($conexao,$sql);
         mysqli_close($conexao);
-        header('Location: lista_parceiro.php');
+
     }
 ?>
