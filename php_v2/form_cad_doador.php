@@ -6,73 +6,52 @@
 <?php include('cabecalho.php'); ?>
 <!--FIM CABEÇALHO-->
 
+
 <!--FORMULÁRIO DE CADASTRO-->
 
 <div class="container_cadastro">
 
   <h3>Realize seu Cadastro Doador ;)</h3>
 
-  <form method="post" action=""><br><br>
+  <form method="post" action="insert_doador.php"><br><br>
 
     <!-- doador -->
-    <form method="post" enctype="multipart/form-data" action="form_cad_doador.php">
+    <div>
+      <label>Nome</label>
+      <input type="text" name="nome" placeholder="Nome Completo"><br><br>
 
-      <label>Nome
-        <input type="text" name="nome" placeholder="Nome Completo" required><br><br>
-      </label>
+      <label>E-mail</label>
+      <input type="text" name="email" placeholder="Digite seu email"><br><br>
 
-      <label>E-mail
-        <input type="text" name="email" placeholder="Digite seu email" required><br><br>
-      </label>
+      <label>Telefone</label>
+      <input type="text" name="telefone" placeholder="Digite seu telefone"><br><br>
 
-      <label>Telefone
-        <input type="text" name="telefone" placeholder="Digite seu telefone" required><br><br>
-      </label>
+      <label>Cidade</label>
+      <input type="text" name="cidade" placeholder="Digite a sua cidade"><br><br>
 
-      <label>Cidade
-        <input type="text" name="cidade" placeholder="Digite a sua cidade" required><br><br>
-      </label>
+      <label>Login</label>
+      <input type="text" name="login" placeholder="Digite seu login"><br><br>
 
-      <label>Login
-        <input type="text" name="login" placeholder="Digite seu login" required><br><br>
-      </label>
+      <label>Senha</label>
+      <input type="text" name="senha" placeholder="Digite a senha"><br><br>
 
-      <label>Senha
-        <input type="text" name="senha" placeholder="Digite a senha" required><br><br>
-      </label>
-
-      <label>Confirme sua Senha
-        <input type="text" name="conf_senha" placeholder="Digite a senha novamente" required><br><br>
-      </label>
-
+      <label>Confirme sua Senha</label>
+      <input type="text" name="conf_senha" placeholder="Digite a senha novamente"><br><br>
+    </div>
+    </br>
+    <form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
       <label>
         <p>Sua Foto</p> <br><input type="file" name="image" />
-        </br>
-        <br><button type="submit" name="enviar" value="1" id="form_botao_cadastrar">Cadastrar Doador</button>
+    </form><br>
 
-    </form>
+    <br><button type="submit" name="enviar" id="button">Cadastrar doador</button>
 
-    <!--INICIO RODAPE -->
 
-    <?php include('rodape.php'); ?>
+  </form>
 
-    <!--FIM RODAPE -->
 
-    <!-- conexão PHP -->
-    <?php
-    include_once("conectar.php");
-    if(isset($_POST['Post'])){
-        $nome=$_POST['nome'];
-        $email=$_POST['email'];
-        $telefone=$_POST['telefone'];
-        $cidade=$_POST['cidade'];
-        $login=$_POST['login'];
-        $senha=$_POST['senha'];
-        $imagem=$_POST['imagem'];
+  <!--INICIO RODAPE -->
 
-    $sql = "INSERT INTO doador (nome, email, telefone, cidade, login_doador, senha_doador, data_cadastro, $imagem) VALUES ('$nome','$email','$telefone','$cidade', '$login', '$senha', NOW(), '$imagem')";
-        mysqli_query($conexao,$sql);
-        mysqli_close($conexao);
-        header('Location: dashboard/painel_doador.php');
-    }
-?>
+  <?php include('rodape.php'); ?>
+
+  <!--FIM RODAPE -->
