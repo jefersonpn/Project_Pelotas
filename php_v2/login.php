@@ -1,4 +1,5 @@
 <?php
+// colocar no git
 include('conectar.php');
 
 if(isset($_POST['email']) || isset($_POST['senha'])) {
@@ -105,6 +106,37 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
     </form>
   </div>
+
+  <div class="flex-child container_login">
+    <form method="post" action="form_cad_parceiro.php">
+
+      <h3>AMIGOPET</h3>
+      <h4>PARCEIRO</h4>
+
+      <p class="link">Faça o seu login<br><br><br>
+
+        Ainda não tem conta?
+        <a href="form_cad_parceiro.php">Cadastre-se</a>
+      </p><br><br>
+
+      <p>
+        <label for="email_login">E-mail&nbsp;</label>
+        <input id="email_login" name="email_login" required="required" type="text"
+          placeholder="contato@amigopet.com" /><br><br>
+      </p>
+
+      <p>
+        <label for="senha_login">CPF&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" />
+      </p><br><br>
+
+      <p>
+        <input class="button" type="submit" value="Logar" />
+      </p><br>
+
+    </form>
+  </div>
+
 </div>
 
 
