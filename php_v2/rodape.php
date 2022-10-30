@@ -13,8 +13,8 @@
     case 'sobre':
         echo "<title>Sobre - Amigo Pet</title>";
         break;
-    case 'parceiro':
-        echo "<title>Parceiro - Amigo Pet</title>";
+    case 'parceiros':
+        echo "<title>Parceiros - Amigo Pet</title>";
         break;
     case 'login':
         echo "<title>Login - Amigo Pet</title>";
@@ -27,26 +27,25 @@
 
 
         <!--INICIO RODAPE-->
-        <footer id="rodape">
-          <img class="logo2" alt="AMIGO PET" width="150x" src="../img/logo.png" />
+        <footer>
+          <footer id="rodape">
+            <img class="logo2" alt="AMIGO PET" width="150x" src="img/logo.png" />
 
-          <div class="sitemap">
-            <ul class="menu">
+            <div class="sitemap">
               <li><a href="index.php?title=home">Home</a></li>
               <li><a href="contato.php?title=contato">Contato</a></li>
               <li><a href="sobre.php?title=sobre">Sobre</a></li>
-              <li><a href="parceiro.php?title=parceiro">Parceiro</a></li>
+              <li><a href="parceiros.php?title=parceiros">Parceiro</a></li>
               <li><a href="login.php?title=login">Cadastrar | Login</a></li>
-            </ul>
-          </div>
+            </div>
 
-          <div class="direitos_autorais">
-            Instituto Amigo Pet © 2022 Todos os direitos reservados.
-            Consulte nossa Política de Privacidade.
-          </div>
-        </footer>
-        <!--FIM RODAPE-->
+            <div class="direitos_autorais">
+              Instituto Amigo Pet © 2022 Todos os direitos reservados.
+              Consulte nossa Política de Privacidade.
+            </div>
+          </footer>
+          <!--FIM RODAPE-->
 
-        </body>
+          </body>
 
-        </html>
+          </html>

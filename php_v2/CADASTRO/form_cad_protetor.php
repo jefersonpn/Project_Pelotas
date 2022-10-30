@@ -3,59 +3,59 @@
 ?>
 
 <!--INICIO CABEÇALHO-->
-<?php include('../cabecalho.php'); ?>
+<?php include('../cabecalho_outros.php'); ?>
 <!--FIM CABEÇALHO-->
 
 
- <!--FORMULÁRIO DE CADASTRO-->
+<!--FORMULÁRIO DE CADASTRO-->
 
- <div class="container_cadastro">
+<div class="container_cadastro">
 
-        <h3>Realize seu Cadastro Protetor ;)</h3>
+  <h3>Realize seu Cadastro Protetor ;)</h3>
 
-        <form method="post" action=""><br><br>
+  <form method="post" action=""><br><br>
 
-        <!-- protetor -->
-        <div>
-            <label>Nome</label>
-            <input type="text" name="nome" placeholder="Nome Completo"><br><br>
+    <!-- protetor -->
+    <div>
+      <label>Nome</label>
+      <input type="text" name="nome" placeholder="Nome Completo"><br><br>
 
-            <label>E-mail</label>
-            <input type="text" name="email" placeholder="Digite seu email"><br><br>
+      <label>E-mail</label>
+      <input type="text" name="email" placeholder="Digite seu email"><br><br>
 
-            <label>Telefone</label>
-            <input type="text" name="telefone" placeholder="Digite seu telefone"><br><br>
+      <label>Telefone</label>
+      <input type="text" name="telefone" placeholder="Digite seu telefone"><br><br>
 
-            <label>Cidade</label>
-            <input type="text" name="cidade" placeholder="Digite a sua cidade"><br><br>
+      <label>Cidade</label>
+      <input type="text" name="cidade" placeholder="Digite a sua cidade"><br><br>
 
-            <label>Login</label>
-            <input type="text" name="login" placeholder="Digite seu login"><br><br>
+      <label>Login</label>
+      <input type="text" name="login" placeholder="Digite seu login"><br><br>
 
-            <label>Senha</label>
-            <input type="text" name="senha" placeholder="Digite a senha"><br><br>
-        </div>
+      <label>Senha</label>
+      <input type="text" name="senha" placeholder="Digite a senha"><br><br>
+    </div>
 
-        <form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
-                    <label>
-                        <p>Foto</p> <br><input type="file" name="image" />
-                        <input type="submit" id="button_upload" value="Enviar" name="envia" /> 
-        </form><br><br><br><br>
+    <form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
+      <label>
+        <p>Foto</p> <br><input type="file" name="image" />
+        <input type="submit" id="button_upload" value="Enviar" name="envia" />
+    </form><br><br><br><br>
 
-        <br><button type="submit" name="enviar" id="button">Cadastrar Protetor</button>
+    <br><button type="submit" name="enviar" id="button">Cadastrar Protetor</button>
 
-        </form> 
+  </form>
 
 
 
-    <!--INICIO RODAPE -->
+  <!--INICIO RODAPE -->
 
-        <?php include('../rodape.php'); ?>
+  <?php include('../rodape.php'); ?>
 
-    <!--FIM RODAPE -->
+  <!--FIM RODAPE -->
 
-    <!-- conexão PHP -->
-<?php
+  <!-- conexão PHP -->
+  <?php
     include_once("../conectar.php");
     if(isset($_POST['Post'])){
         $nome=$_POST['nome'];

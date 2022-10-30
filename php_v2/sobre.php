@@ -60,7 +60,7 @@ include_once("conectar.php");
       do
       espaço disponível na casa e de várias outras razões.<br><br>
     <p>Tem vários jeitos de contribuir com o site: divulgando,
-      sendo<br> voluntário, comprando produtos <a href="cadastrar.html">
+      sendo<br> voluntário, comprando produtos <a href="CADASTRO/form_cad_protetor.php?title=cadastrar">
         Clique aqui</a> para se cadastrar.</p><br><br>
 
     <p>Sendo assim, se você busca uma forma de contribuir<br>
@@ -76,27 +76,13 @@ include_once("conectar.php");
 
 <!-- FIM SOBRE -->
 
-<!--INICIO RODAPE-->
-<footer>
-  <footer id="rodape">
-    <img class="logo2" alt="AMIGO PET" width="150x" src="img/logo.png" />
+<!--INICIO RODAPE -->
 
-    <div class="sitemap">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="contato.html">Contato</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="parceiro.html">Parceiro</a></li>
-      <li><a href="login.html">Cadastrar | Login</a></li>
-    </div>
+<?php include('rodape.php'); ?>
 
-    <div class="direitos_autorais">
-      Instituto Amigo Pet © 2022 Todos os direitos reservados.
-      Consulte nossa Política de Privacidade.
-    </div>
-  </footer>
-  <!--FIM RODAPE-->
+<!--FIM RODAPE -->
 
 
-  </body>
+</body>
 
-  </html>
+</html>
