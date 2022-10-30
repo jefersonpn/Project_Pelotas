@@ -1,15 +1,18 @@
 <?php
 
-$dns = 'mysql:host=localhost:8889;dbname=protetor';
-$username = 'root';
-$password = 'root';
+$servername = "localhost:8889";
+$username = "root";
+$password = "root";
+$dbname = "protetor";
+ 
+// Create connection
+$conn = new mysqli($servername,
+    $username, $password, $dbname);
+ 
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: "
+        . $conn->connect_error);
+}
 
-try 
-{
-    $pdo = new PDO($dns, $username, $password);
-
-} catch (PDOException $ex)
-     {
-        echo 'Error message: <strong>'.$ex->getMessage().'</strong>';
-     }
      ?>
