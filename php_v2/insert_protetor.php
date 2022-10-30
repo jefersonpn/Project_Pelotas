@@ -21,10 +21,12 @@ if ($conn->query($sqlquery) === TRUE) {
 
 ?>
 
-<?php
-// DESTA FORMA ABAIXO ENTROU OS DADOS NO BANCO DE DADOS, acima não e faltou a imagem e a data_cadastro não entrou
+
 
 <?php
+ 
+// DESTA FORMA ABAIXO ENTROU OS DADOS NO BANCO DE DADOS, acima não e faltou a imagem e a data_cadastro não entrou
+ 
 //including code for database conection
 include 'conectar.php';
 
