@@ -36,8 +36,8 @@
     case 'sobre':
         echo "<title>Sobre - Amigo Pet</title>";
         break;
-    case 'parceiro':
-        echo "<title>Parceiro - Amigo Pet</title>";
+    case 'parceiros':
+        echo "<title>Parceiros - Amigo Pet</title>";
         break;
     case 'login':
         echo "<title>Login - Amigo Pet</title>";
@@ -57,8 +57,8 @@
           <!-- Coloquei "../" antes do caminhos dos links para que busque no diretorio anterior  e nao na pasta CADASTRO -->
           <li><a href="../index.php?title=home">Home</a></li>
           <li><a href="../contato.php?title=contato">Contato</a></li>
-          <li><a href="../sobre.php?title=sobre">Sobre</a></li>
-          <li><a href="../parceiro.php?title=parceiro">Parceiro</a></li>
+          <li><a href="../EXTERNO/sobre.php?title=sobre">Sobre</a></li>
+          <li><a href="../parceiros.php?title=parceiros">Parceiros</a></li>
           <li><a href="../login.php?title=login">Cadastrar | Login</a></li>
         </ul>
       </nav>
