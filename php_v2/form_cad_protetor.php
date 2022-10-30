@@ -1,9 +1,9 @@
 <?php 
-    include("../conectar.php");
+    include("conectar.php");
 ?>
 
 <!--INICIO CABEÇALHO-->
-<?php include('../cabecalho_outros.php'); ?>
+<?php include('cabecalho.php'); ?>
 <!--FIM CABEÇALHO-->
 
 
@@ -13,7 +13,7 @@
 
   <h3>Realize seu Cadastro Protetor ;)</h3>
 
-  <form method="post" action=""><br><br>
+  <form method="post" action="insert_protetor.php"><br><br>
 
     <!-- protetor -->
     <div>
@@ -34,41 +34,24 @@
 
       <label>Senha</label>
       <input type="text" name="senha" placeholder="Digite a senha"><br><br>
-    </div>
 
+      <label>Confirme sua Senha</label>
+      <input type="text" name="conf_senha" placeholder="Digite a senha novamente"><br><br>
+    </div>
+    </br>
     <form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
       <label>
-        <p>Foto</p> <br><input type="file" name="image" />
-        <input type="submit" id="button_upload" value="Enviar" name="envia" />
-    </form><br><br><br><br>
+        <p>Sua Foto</p> <br><input type="file" name="image" />
+    </form><br>
 
     <br><button type="submit" name="enviar" id="button">Cadastrar Protetor</button>
+
 
   </form>
 
 
-
   <!--INICIO RODAPE -->
 
-  <?php include('../rodape.php'); ?>
+  <?php include('rodape.php'); ?>
 
   <!--FIM RODAPE -->
-
-  <!-- conexão PHP -->
-  <?php
-    include_once("../conectar.php");
-    if(isset($_POST['Post'])){
-        $nome=$_POST['nome'];
-        $email=$_POST['email'];
-        $telefone=$_POST['telefone'];
-        $cidade=$_POST['cidade'];
-        $login=$_POST['login'];
-        $senha=$_POST['senha'];
-        $imagem=$_POST['imagem'];
-
-    $sql = "INSERT INTO protetor (nome, email, telefone, cidade, login_protetor, senha_protetor, data_cadastro, imagem) VALUES ('$nome','$email','$telefone','$cidade', '$login', '$senha', NOW(), '$imagem')";
-        mysqli_query($conexao,$sql);
-        mysqli_close($conexao);
-        header('Location: dashboard/painel_protetor.php');
-    }
-?>

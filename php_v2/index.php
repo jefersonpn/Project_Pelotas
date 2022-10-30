@@ -22,7 +22,7 @@
       ração,<br>casinha e outras coisas necessárias para o
       bem-estar dos pets.</p><br><br>
 
-    <a href="CADASTRO/form_cad_doador.php?title=cadastrar" class="button">Quero me Cadastrar</a>
+    <a href="form_cad_doador.php?title=cadastrar" class="button">Quero me Cadastrar</a>
 
   </div>
 

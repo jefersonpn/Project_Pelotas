@@ -86,7 +86,12 @@
 
 <h3 class="titulo_parceiro">Vamos conversar?</h3>
 
-<p class="texto_parceiro">Escreva para <strong><span style="color: #FF6315;">
+</br>
+
+</br>
+
+<p class="texto_parceiro"><a href="form_cad_parceiro.php">Quero ser parceiro</a> ou escreva para <strong><span
+      style="color: #FF6315;">
       parcerias_amigopet@gmail.com</span></strong> ou whatsapp
   <strong><span style="color: #FF6315;">(53) 98425-7240</span></strong>.<br>
   A bicharada por aqui está animada, e nós também. =^.^=

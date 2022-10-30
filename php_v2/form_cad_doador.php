@@ -1,9 +1,9 @@
 <?php 
-    include("../conectar.php");
+    include("conectar.php");
 ?>
 
 <!--INICIO CABEÇALHO-->
-<?php include('../cabecalho_outros.php'); ?>
+<?php include('cabecalho.php'); ?>
 <!--FIM CABEÇALHO-->
 
 <!--FORMULÁRIO DE CADASTRO-->
@@ -15,7 +15,7 @@
   <form method="post" action=""><br><br>
 
     <!-- doador -->
-    <form method="post" action="form_cad_doador.php">
+    <form method="post" enctype="multipart/form-data" action="form_cad_doador.php">
 
       <label>Nome
         <input type="text" name="nome" placeholder="Nome Completo" required><br><br>
@@ -41,27 +41,26 @@
         <input type="text" name="senha" placeholder="Digite a senha" required><br><br>
       </label>
 
-      <form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
-        <label>
-          <p>Foto</p> <br><input type="file" name="image" />
-          <input type="submit" id="button_upload" value="Enviar" name="envia" />
-      </form><br><br><br>
+      <label>Confirme sua Senha
+        <input type="text" name="conf_senha" placeholder="Digite a senha novamente" required><br><br>
+      </label>
 
-
-
-      <br><button type="submit" name="enviar" value="1" id="form_botao_cadastrar">Cadastrar Doador</button>
+      <label>
+        <p>Sua Foto</p> <br><input type="file" name="image" />
+        </br>
+        <br><button type="submit" name="enviar" value="1" id="form_botao_cadastrar">Cadastrar Doador</button>
 
     </form>
 
     <!--INICIO RODAPE -->
 
-    <?php include('../rodape.php'); ?>
+    <?php include('rodape.php'); ?>
 
     <!--FIM RODAPE -->
 
     <!-- conexão PHP -->
     <?php
-    include_once("../conectar.php");
+    include_once("conectar.php");
     if(isset($_POST['Post'])){
         $nome=$_POST['nome'];
         $email=$_POST['email'];

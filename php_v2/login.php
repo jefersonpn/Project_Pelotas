@@ -55,7 +55,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
       <p class="link">Faça o seu login<br><br><br>
 
         Ainda não tem conta?
-        <a href="cad_login.html">Cadastre-se</a>
+        <a href="form_cad_protetor.php">Cadastre-se</a>
       </p><br><br>
 
       <p>
@@ -85,7 +85,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
       <p class="link">Faça o seu login<br><br><br>
 
         Ainda não tem conta?
-        <a href="cad_login.html">Cadastre-se</a>
+        <a href="form_cad_doador.php">Cadastre-se</a>
       </p><br><br>
 
       <p>
