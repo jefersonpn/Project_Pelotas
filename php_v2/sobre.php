@@ -60,7 +60,7 @@ include_once("conectar.php");
       do
       espaço disponível na casa e de várias outras razões.<br><br>
     <p>Tem vários jeitos de contribuir com o site: divulgando,
-      sendo<br> voluntário, comprando produtos <a href="CADASTRO/form_cad_protetor.php?title=cadastrar">
+      sendo<br> voluntário, comprando produtos <a href="form_cad_protetor.php?title=cadastrar">
         Clique aqui</a> para se cadastrar.</p><br><br>
 
     <p>Sendo assim, se você busca uma forma de contribuir<br>
@@ -77,9 +77,7 @@ include_once("conectar.php");
 <!-- FIM SOBRE -->
 
 <!--INICIO RODAPE -->
-
 <?php include('rodape.php'); ?>
-
 <!--FIM RODAPE -->
 
 

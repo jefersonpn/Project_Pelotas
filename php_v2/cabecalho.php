@@ -58,7 +58,22 @@
           <li><a href="contato.php?title=contato">Contato</a></li>
           <li><a href="sobre.php?title=sobre">Sobre</a></li>
           <li><a href="parceiros.php?title=parceiros">Parceiros</a></li>
-          <li><a href="login.php?title=login">Cadastrar | Login</a></li>
+          <li>
+            <?php
+            
+              session_start();
+              //print_r($_SESSION['usuario_logado']);
+            
+            if (($_SESSION['usuario_logado'])== '')
+            {
+            echo "<a href='login.php?title=login'>Cadastrar | Login</a></li>";
+          }else
+          {
+          echo "<a href='logout.php'>Logout</a></li>";
+          }
+
+          ?>
+
         </ul>
       </nav>
     </div>

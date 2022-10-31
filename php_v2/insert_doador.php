@@ -17,9 +17,16 @@ $senha_doador= $_POST['senha'];
 $sqlquery = "INSERT INTO doador (nome, email, telefone, cidade, login_doador, senha_doador) VALUES ('$nome', '$email', '$telefone', '$cidade', '$login_doador', '$senha_doador')";
  
 if ($conn->query($sqlquery) === TRUE) {
-    echo "record inserted successfully";
+    
+    $msg = "Seja bem vindo!";
+    session_start();
+    $_SESSION['usuario_logado'] =array();
+    array_push($_SESSION['usuario_logado'], $nome, $email, $telefone, $cidade);     
+    //print_r($_SESSION['usuario_logado']);
+    header("location: painel_doador.php");
+    
 } else {
-    echo "Error: " . $sqlquery . "<br>" . $conn->error;
+echo "Error: " . $sqlquery . "<br>" . $conn->error;
 }
 
 ?>
