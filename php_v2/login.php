@@ -78,7 +78,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
   </div>
 
   <div class="flex-child container_login">
-    <form method="post" action="">
+    <form method="post" action="fazer_login.php">
 
       <h3>AMIGOPET</h3>
       <h4>DOADOR</h4>
