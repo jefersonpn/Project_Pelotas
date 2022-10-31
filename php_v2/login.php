@@ -66,7 +66,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
       </p>
 
       <p>
-        <label for="senha_login">CPF&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" />
       </p><br><br>
 
@@ -96,7 +96,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
       </p>
 
       <p>
-        <label for="senha_login">CPF&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" />
       </p><br><br>
 
@@ -126,7 +126,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
       </p>
 
       <p>
-        <label for="senha_login">CPF&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" />
       </p><br><br>
 
