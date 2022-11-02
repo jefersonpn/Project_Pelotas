@@ -35,18 +35,10 @@
       <label>Senha</label>
       <input type="text" name="senha" placeholder="Digite a senha"><br><br>
 
-      <label>Confirme sua Senha</label>
-      <input type="text" name="conf_senha" placeholder="Digite a senha novamente"><br><br>
     </div>
     </br>
-    <form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
-      <label>
-        <p>Sua Foto</p> <br><input type="file" name="image" />
-    </form><br>
 
     <br><button type="submit" name="enviar" id="button">Cadastrar Protetor</button>
-
-
   </form>
 
 

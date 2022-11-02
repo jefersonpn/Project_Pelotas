@@ -48,7 +48,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
 <div class="flex-container">
   <div class="flex-child container_login">
-    <form method="post" action="">
+    <form method="post" action="fazer_login.php?login=1">
 
       <h3>AMIGOPET</h3>
       <h4>PROTETOR</h4>
@@ -78,7 +78,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
   </div>
 
   <div class="flex-child container_login">
-    <form method="post" action="fazer_login.php">
+    <form method="post" action="fazer_login.php?login=2">
 
       <h3>AMIGOPET</h3>
       <h4>DOADOR</h4>
@@ -108,7 +108,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
   </div>
 
   <div class="flex-child container_login">
-    <form method="post" action="form_cad_parceiro.php">
+    <form method="post" action="fazer_login.php?login=3">
 
       <h3>AMIGOPET</h3>
       <h4>PARCEIRO</h4>
