@@ -29,7 +29,7 @@ include_once("conectar.php");
     <!--FIM CABEÇALHO-->
 
 
-    <!-- INICIO TELA PRINCIPAL PARCEIRO E PROTETORES -->
+    <!-- INICIO TELA PRINCIPAL PROTETORES -->
 
     <div class="posicao_padrao1">
 
@@ -66,6 +66,9 @@ include_once("conectar.php");
           é você ir até o parceiro<br> e retirar no local em até 3 dias.
           Caso não busque, o produto é descartado.
         </p><br><br>
+
+        <p>Clique no botão doar se deseja doar um objeto pet que não use mais:</p><a href="cadastrar_solicitacao.php" id="button">Nova Solicitação</a> <!-- leva para página de cadastro de doação -->
+
 
         <section class="container_amigoPet1">
 
@@ -108,6 +111,8 @@ include_once("conectar.php");
           </div>
 
         </section><br><br>
+
+        <p>Verifique mais doações, clique no botão:</p><a href="lista_doacao.php.php" id="button">+ Doações</a> <!-- leva para página de cadastro de doação -->
 
       </div>
 
@@ -162,7 +167,7 @@ include_once("conectar.php");
     </div>
 
 
-    <!-- FIM TELA PRINCIPAL PARCEIRO E PROTETORES -->
+    <!-- FIM TELA PRINCIPAL PROTETORES -->
 
     <!--INICIO RODAPE-->
     <footer>
