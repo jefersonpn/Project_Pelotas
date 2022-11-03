@@ -94,6 +94,9 @@ include_once("conectar.php");
       </div>
 
     </section><br><br>
+    
+    <p>Verifique mais solicitações, clique no botão:</p><a href="listasolicitacao.php.php" id="button">+ Solicitações</a> <!-- leva para página de cadastro de doação -->
+
 
   </div>
 
