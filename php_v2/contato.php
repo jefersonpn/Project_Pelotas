@@ -13,25 +13,25 @@ include_once("conectar.php");
 
   <h3>Formulário de contato - AMIGOPET</a></h3><br><br>
 
-  <form method="post" onsubmit="validaForm(); return false;" class="form">
+  <form method="post" action="send_contato.php" onsubmit="validaForm(); return false;" class="form">
 
     <p>
       <label for="name">Nome</label>
-      <input type="text" placeholder="Nome" />
+      <input type="text" name='nome' placeholder="Nome" />
     </p><br>
 
     <p>
       <label for="email">E-mail</label>
-      <input type="text" placeholder="mail@exemplo.com" />
+      <input type="text" name='email' placeholder="mail@exemplo.com" />
     </p><br>
 
     <p>
       <label for="mensagem">Mensagem<br><br></label>
-      <textarea placeholder="Escreva sua mensagem" /></textarea>
+      <textarea name='mensagem' placeholder="Escreva sua mensagem" /></textarea>
     </p><br><br>
 
     <p>
-      <input class="button" type="submit" value="Enviar Mensagem" />
+      <input class="button" type="submit" name="send" value="Enviar Mensagem" />
     </p><br>
 
   </form>
