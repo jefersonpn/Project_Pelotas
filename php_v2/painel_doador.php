@@ -17,11 +17,7 @@ include_once("conectar.php");
 <div class="posicao_padrao1">
 
   <section class="container_amigoPet">
-    <div>
-      </br>
-      <h3>Seja bem vindo <?php echo $_SESSION['usuario_logado']['0']; ?></h3>
-      </br>
-    </div>
+
 
     <div class="item_amigopet">
       <img class="logo" alt="AMIGO PET" width="350px" src="img/principal/amigopet_adocaoanimais.jpg" />
@@ -55,6 +51,8 @@ include_once("conectar.php");
       Caso não busque, o produto é descartado.
     </p><br><br>
 
+    <p>Clique no botão doar se deseja doar um objeto pet que não use mais:</p><a href="cadastrar_doacao.php" id="button">Nova Doação</a> <!-- leva para página de cadastro de doação -->
+
     <section class="container_amigoPet1">
 
       <div class="item_escolhe">
@@ -71,7 +69,7 @@ include_once("conectar.php");
       </div>
 
       <div class="item_escolhe1">
-        <a href="doacao_solicitar.html" id="button">Doador</a>
+        <a href="doacao_solicitar.html" id="button">Doar</a>
       </div>
 
     </section>
@@ -92,7 +90,7 @@ include_once("conectar.php");
       </div>
 
       <div class="item_escolhe1">
-        <a href="doacao_solicitar.html" id="button">Doador</a>
+        <a href="doacao_solicitar.html" id="button">Doar</a>
       </div>
 
     </section><br><br>
