@@ -39,7 +39,7 @@ include_once("conectar.php");
                   <thead class="thead-primary">
                     <tr>
                       <th><button type="button" class="Deletar">Deletar</button></th>
-                      <th>&nbsp;</th>
+                      <th><button type="button" class="Doar">+ Doar</button></th>
                       <th>Descrição</th>
                       <th>Status</th>
                       <th>Parceiro</th>
