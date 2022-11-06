@@ -57,23 +57,23 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
         Ainda não tem conta?
         <a href="form_cad_protetor.php">Cadastre-se</a>
-      </p><br><br>
+      </p>
 
-      <p>
+      <div style="margin-top:-80px;">
         <label for="email_login">E-mail&nbsp;</label>
         <input id="email_login" name="email_login" required="required" type="text"
           placeholder="contato@amigopet.com" /><br><br>
-      </p>
 
-      <p>
+
+
         <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" />
-      </p><br><br>
 
-      <p>
-        <input class="button" type="submit" value="Logar" />
-      </p><br>
 
+        <p>
+          <input class="btn btn-success" type="submit" value="Logar" />
+        </p><br>
+      </div>
     </form>
   </div>
 
@@ -87,23 +87,21 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
         Ainda não tem conta?
         <a href="form_cad_doador.php">Cadastre-se</a>
-      </p><br><br>
+      </p>
 
-      <p>
+      <div style="margin-top:-80px;">
         <label for="email_login">E-mail&nbsp;</label>
         <input id="email_login" name="email_login" required="required" type="text"
           placeholder="contato@amigopet.com" /><br><br>
-      </p>
 
-      <p>
+
+
         <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" />
-      </p><br><br>
-
-      <p>
-        <input class="button" type="submit" value="Logar" />
-      </p><br>
-
+        <p>
+          <input class="btn btn-success" type="submit" value="Logar" />
+        </p><br>
+      </div>
     </form>
   </div>
 
@@ -114,24 +112,20 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
       <h4>PARCEIRO</h4>
 
       <p class="link">Faça o seu login<br><br><br>
-
         Ainda não tem conta?
         <a href="form_cad_parceiro.php">Cadastre-se</a>
-      </p><br><br>
-
-      <p>
+      </p>
+      <div style="margin-top:-80px;">
         <label for="email_login">E-mail&nbsp;</label>
         <input id="email_login" name="email_login" required="required" type="text"
           placeholder="contato@amigopet.com" /><br><br>
-      </p>
 
-      <p>
         <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" />
-      </p><br><br>
+      </div>
 
       <p>
-        <input class="button" type="submit" value="Logar" />
+        <input class="btn btn-success " type="submit" value="Logar" />
       </p><br>
 
     </form>
