@@ -16,6 +16,7 @@ include_once("conectar.php");
     <div>
       </br>
       <h2>Seja bem vindo <?php echo $_SESSION['usuario_logado']['0']; ?></h2>
+      <p><button type="button" class="itensColetados">Itens Coletados</button></p>
     </div>
 
     <div>
