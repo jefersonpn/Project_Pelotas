@@ -1,5 +1,5 @@
 <?php
-
+// colocar no git
 include('conectar.php');
 
 if(isset($_POST['email']) || isset($_POST['senha'])) {
@@ -130,12 +130,6 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
   </div>
 
 </div>
-
-
-
-
-
-
 <!-- FIM LOGIN -->
 
 <!--INICIO RODAPE -->
