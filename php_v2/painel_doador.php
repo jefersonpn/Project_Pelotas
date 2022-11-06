@@ -38,8 +38,12 @@ include_once("conectar.php");
                 <table class="table">
                   <thead class="thead-primary">
                     <tr>
-                      <th><button type="button" class="Deletar">Deletar</button></th>
-                      <th><button type="button" class="Doar">+ Doar</button></th>
+                      <form action="cadastro_doacao_voluntaria.php" method="POST">
+                        <th><button formaction="deletar_item.php" type=" submit" class="Deletar">Deletar</button></th>
+                        <th>
+                          <button formaction="cadastro_doacao_voluntaria.php" type="submit" class="Doar">+ Doar</button>
+                        </th>
+                      </form>
                       <th>Descrição</th>
                       <th>Status</th>
                       <th>Parceiro</th>
