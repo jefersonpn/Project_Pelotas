@@ -46,6 +46,7 @@ include_once("conectar.php");
                       <th>Doador</th>
                       <th>&nbsp;</th>
                       <th>&nbsp;</th>
+                      <th>Soliciitante</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -79,6 +80,8 @@ include_once("conectar.php");
                           <option value="opel">Retirado</option>
                         </select>
                       </td>
+                      <td><button type="button" class="ver">Ver</button></td>
+
                     </tr>
 
                     <tr class="alert" role="alert">
@@ -111,6 +114,7 @@ include_once("conectar.php");
                           <option value="opel">Retirado</option>
                         </select>
                       </td>
+                      <td><button type="button" disabled="disabled" class="ver">Ver</button></td>
                     </tr>
 
 
@@ -144,6 +148,7 @@ include_once("conectar.php");
                           <option value="opel">Retirado</option>
                         </select>
                       </td>
+                      <td><button type="button" class="ver">Ver</button></td>
                     </tr>
 
 
@@ -177,6 +182,7 @@ include_once("conectar.php");
                           <option value="opel">Retirado</option>
                         </select>
                       </td>
+                      <td><button type="button" class="ver">Ver</button></td>
                     </tr>
 
 
@@ -210,6 +216,7 @@ include_once("conectar.php");
                           <option value="opel">Retirado</option>
                         </select>
                       </td>
+                      <td><button type="button" class="ver">Ver</button></td>
                     </tr>
 
                   </tbody>
