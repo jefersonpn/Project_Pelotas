@@ -27,7 +27,8 @@ textarea {
 
 .container_login {
     text-align: center;
-    height: 290px;
+    height: 550px;
+    padding: 30px;
     border: 1px solid #FF6315;
     margin-top: 50px;
     margin-bottom: 130px;
@@ -41,8 +42,8 @@ textarea {
 
 .flex-child {
     flex: 1;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .flex-child:first-child {
