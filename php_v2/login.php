@@ -51,26 +51,25 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
     <form method="post" action="fazer_login.php?login=1">
 
       <h3>AMIGOPET</h3>
-      <h4>PROTETOR</h4>
+      <h4>PROTETOR</h4><br>
 
-      <p class="link">Faça o seu login<br><br><br>
-
-        Ainda não tem conta?
+       Ainda não tem conta?
         <a href="form_cad_protetor.php">Cadastre-se</a>
-      </p>
-
+      </p><br>
+      <br><br>
+        
       <div style="margin-top:-80px;">
-        <label for="email_login">E-mail&nbsp;</label>
+        <label for="email_login">E-mail&nbsp;</label><br>
         <input id="email_login" name="email_login" required="required" type="text"
           placeholder="contato@amigopet.com" /><br><br>
 
 
 
-        <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" />
+        <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+        <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" /><br>
 
 
-        <p>
+        <p><br>
           <input class="btn btn-success" type="submit" value="Logar" />
         </p><br>
       </div>
@@ -82,23 +81,20 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
       <h3>AMIGOPET</h3>
       <h4>DOADOR</h4>
-
-      <p class="link">Faça o seu login<br><br><br>
-
-        Ainda não tem conta?
+      <br>
+      Ainda não tem conta?
         <a href="form_cad_doador.php">Cadastre-se</a>
-      </p>
+      </p><br>
+      <br>
 
-      <div style="margin-top:-80px;">
-        <label for="email_login">E-mail&nbsp;</label>
+      <div style="margin-top:-80px;"><br>
+        <label for="email_login">E-mail&nbsp;</label><br>
         <input id="email_login" name="email_login" required="required" type="text"
           placeholder="contato@amigopet.com" /><br><br>
 
-
-
-        <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" />
-        <p>
+        <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+        <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" /><br>
+        <p><br>
           <input class="btn btn-success" type="submit" value="Logar" />
         </p><br>
       </div>
@@ -110,21 +106,23 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
       <h3>AMIGOPET</h3>
       <h4>PARCEIRO</h4>
+      <br>
 
-      <p class="link">Faça o seu login<br><br><br>
         Ainda não tem conta?
         <a href="form_cad_parceiro.php">Cadastre-se</a>
-      </p>
+      </p><br>
+      <br><br>
+
       <div style="margin-top:-80px;">
-        <label for="email_login">E-mail&nbsp;</label>
+        <label for="email_login">E-mail&nbsp;</label><br>
         <input id="email_login" name="email_login" required="required" type="text"
           placeholder="contato@amigopet.com" /><br><br>
 
-        <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" />
+        <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+        <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" /><br>
       </div>
 
-      <p>
+      <p><br>
         <input class="btn btn-success " type="submit" value="Logar" />
       </p><br>
 
