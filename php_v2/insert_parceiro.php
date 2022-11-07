@@ -13,10 +13,12 @@ $cidade = $_POST['cidade'];
 $login_parceiro= $_POST['login'];
 $senha_parceiro= $_POST['senha'];
 $cnpj = $_POST['cnpj'];
+
 // Tratanto a imagem
 $imagem = $_FILES['imagem'];
 $nome_imagem= $imagem['name'];
 $imagem_file_temp= $imagem['tmp_name'];
+
 // Tratando extensão da imagem
 $ext_imagem=  explode('.',$nome_imagem);
 $ext_imagem= end($ext_imagem);// aqui pegamos apenas a extensao da imagem
