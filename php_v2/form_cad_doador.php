@@ -34,7 +34,7 @@
       <input type="text" name="login" placeholder="Digite seu login"><br><br>
 
       <label>Senha </label>
-      <input type="text" name="senha" placeholder="Digite a senha"><br><br>
+      <input type="text" name="senha" placeholder="Digite a senha">
 
     </div>
     </br>
@@ -42,7 +42,7 @@
     <!--<form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
       <label>
         <p>Sua Foto</p> <br><input type="file" name="image" />
-    </form>--><br>
+    </form>-->
 
     <br><button type="submit" name="enviar" id="button">Cadastrar Doador</button>
 
