@@ -78,13 +78,13 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
       </br>
 
       <div>
-        <label for="email_login">E-mail&nbsp;</label>
+        <label for="email_login">E-mail</label>
         <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@amigopet.com" />
         <p>
           Ainda não tem conta?
-          <a href="form_cad_doador.php">Cadastre-se</a>
+          <a class="cadastrese" href="form_cad_doador.php">Cadastre-se</a>
         </p>
-        <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <label for="senha_login">Senha</label>
         <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" /><br>
         <p>
           <input class="btn btn-success" type="submit" value="Logar" />
@@ -101,11 +101,11 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
       <br>
 
       <div>
-        <label for="email_login">E-mail&nbsp;</label>
+        <label for="email_login">E-mail</label>
         <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@amigopet.com" />
-        <p>Ainda não tem conta? <a href="form_cad_parceiro.php">Cadastre-se</a>
+        <p>Ainda não tem conta? <a class="cadastrese" href="form_cad_parceiro.php">Cadastre-se</a>
         </p>
-        <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <label for="senha_login">Senha</label>
         <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" /><br>
       </div>
 
