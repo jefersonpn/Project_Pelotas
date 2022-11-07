@@ -11,34 +11,36 @@
 
 <div class="container_cadastro">
 
-  <h3>Realize seu Cadastro Protetor ;)</h3>
+  <div class="form_cadastro">
+  <h3>Realize seu Cadastro Protetor</h3>
 
   <form method="post" action="insert_protetor.php"><br><br>
 
     <!-- protetor -->
     <div>
-      <label>Nome</label>
+      <label>Nome </label>
       <input type="text" name="nome" placeholder="Nome Completo"><br><br>
 
-      <label>E-mail</label>
+      <label>E-mail </label>
       <input type="text" name="email" placeholder="Digite seu email"><br><br>
 
-      <label>Telefone</label>
+      <label>Telefone </label>
       <input type="text" name="telefone" placeholder="Digite seu telefone"><br><br>
 
-      <label>Cidade</label>
+      <label>Cidade </label>
       <input type="text" name="cidade" placeholder="Digite a sua cidade"><br><br>
 
-      <label>Login</label>
+      <label>Login </label>
       <input type="text" name="login" placeholder="Digite seu login"><br><br>
 
-      <label>Senha</label>
+      <label>Senha </label>
       <input type="text" name="senha" placeholder="Digite a senha"><br><br>
 
     </div>
-    </br>
+      <button type="submit" name="enviar" id="button">Cadastrar Protetor</button>
+    </div>
 
-    <br><button type="submit" name="enviar" id="button">Cadastrar Protetor</button>
+   
   </form>
 
 
