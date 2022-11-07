@@ -51,27 +51,21 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
     <form method="post" action="fazer_login.php?login=1">
 
       <h3>AMIGOPET</h3>
-      <h4>PROTETOR</h4><br>
+      <h4>PROTETOR</h4>
+      </br>
 
-       Ainda não tem conta?
-        <a href="form_cad_protetor.php">Cadastre-se</a>
-      </p><br>
-      <br><br>
-        
-      <div style="margin-top:-80px;">
-        <label for="email_login">E-mail&nbsp;</label><br>
-        <input id="email_login" name="email_login" required="required" type="text"
-          placeholder="contato@amigopet.com" /><br><br>
-
-
-
-        <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
-        <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" /><br>
-
-
-        <p><br>
+      <div>
+        <label class="" for="email_login">E-mail</label>
+        <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@amigopet.com" />
+        <p>
+          Ainda não tem conta?
+          <a class="cadastrese" href=" form_cad_protetor.php">Cadastre-se</a>
+        </p>
+        <label for="senha_login">Senha</label>
+        <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" />
+        <p>
           <input class="btn btn-success" type="submit" value="Logar" />
-        </p><br>
+        </p>
       </div>
     </form>
   </div>
@@ -81,22 +75,20 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
       <h3>AMIGOPET</h3>
       <h4>DOADOR</h4>
-      <br>
-      Ainda não tem conta?
-        <a href="form_cad_doador.php">Cadastre-se</a>
-      </p><br>
-      <br>
+      </br>
 
-      <div style="margin-top:-80px;"><br>
-        <label for="email_login">E-mail&nbsp;</label><br>
-        <input id="email_login" name="email_login" required="required" type="text"
-          placeholder="contato@amigopet.com" /><br><br>
-
-        <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+      <div>
+        <label for="email_login">E-mail</label>
+        <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@amigopet.com" />
+        <p>
+          Ainda não tem conta?
+          <a class="cadastrese" href="form_cad_doador.php">Cadastre-se</a>
+        </p>
+        <label for="senha_login">Senha</label>
         <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" /><br>
-        <p><br>
+        <p>
           <input class="btn btn-success" type="submit" value="Logar" />
-        </p><br>
+        </p>
       </div>
     </form>
   </div>
@@ -108,23 +100,18 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
       <h4>PARCEIRO</h4>
       <br>
 
-        Ainda não tem conta?
-        <a href="form_cad_parceiro.php">Cadastre-se</a>
-      </p><br>
-      <br><br>
-
-      <div style="margin-top:-80px;">
-        <label for="email_login">E-mail&nbsp;</label><br>
-        <input id="email_login" name="email_login" required="required" type="text"
-          placeholder="contato@amigopet.com" /><br><br>
-
-        <label for="senha_login">Senha&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+      <div>
+        <label for="email_login">E-mail</label>
+        <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@amigopet.com" />
+        <p>Ainda não tem conta? <a class="cadastrese" href="form_cad_parceiro.php">Cadastre-se</a>
+        </p>
+        <label for="senha_login">Senha</label>
         <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" /><br>
       </div>
 
-      <p><br>
+      <p>
         <input class="btn btn-success " type="submit" value="Logar" />
-      </p><br>
+      </p>
 
     </form>
   </div>
@@ -133,11 +120,8 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 <!-- FIM LOGIN -->
 
 <!--INICIO RODAPE -->
-
 <?php include('rodape.php'); ?>
-
 <!--FIM RODAPE -->
-
 
 </body>
 

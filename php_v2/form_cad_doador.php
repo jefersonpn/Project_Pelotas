@@ -6,52 +6,104 @@
 <?php include('cabecalho.php'); ?>
 <!--FIM CABEÇALHO-->
 
-
 <!--FORMULÁRIO DE CADASTRO-->
+<div class="container">
+  <div class=" text-center mt-5 ">
+    <h1>Cadastro de Doadores</h1>
+  </div>
+  <form method="post" action="insert_doador.php">
+    <div class="row ">
+      <div class="col-lg-7 mx-auto">
+        <div class="card mt-2 mx-auto p-4 bg-light">
+          <div class="card-body bg-light">
 
-<div class="container_cadastro">
-
-  <h3>Realize seu Cadastro Doador ;)</h3>
-
-  <form method="post" action="insert_doador.php"><br><br>
-
-    <!-- doador -->
-    <div>
-      <label>Nome</label>
-      <input type="text" name="nome" placeholder="Nome Completo"><br><br>
-
-      <label>E-mail</label>
-      <input type="text" name="email" placeholder="Digite seu email"><br><br>
-
-      <label>Telefone</label>
-      <input type="text" name="telefone" placeholder="Digite seu telefone"><br><br>
-
-      <label>Cidade</label>
-      <input type="text" name="cidade" placeholder="Digite a sua cidade"><br><br>
-
-      <label>Login</label>
-      <input type="text" name="login" placeholder="Digite seu login"><br><br>
-
-      <label>Senha</label>
-      <input type="text" name="senha" placeholder="Digite a senha"><br><br>
-
-      <label>Confirme sua Senha</label>
-      <input type="text" name="conf_senha" placeholder="Digite a senha novamente"><br><br>
-    </div>
-    </br>
-    <form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
-      <label>
-        <p>Sua Foto</p> <br><input type="file" name="image" />
-    </form><br>
-
-    <br><button type="submit" name="enviar" id="button">Cadastrar doador</button>
+            <div class="container">
+              <form id="contact-form" role="form">
 
 
+
+                <div class="controls">
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="nome">Nome completo*</label>
+                        <input id="nome" type="text" name="nome" class="form-control"
+                          placeholder="Nome para te identificar. *" required="required"
+                          data-error="Nome é  obrigatório.">
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="email">E-mail*</label>
+                        <input id="email" type="text" name="email" class="form-control" placeholder="Seu email. *"
+                          required="required" data-error="Email é  obrigatório.">
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="telefone">Telefone *</label>
+                        <input id="telefone" type="text" size="12" name="telefone" class="form-control"
+                          placeholder="DD 999999999 *" required="required" data-error="Telefone é obrigatorio.">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="cidade">Cidade *</label>
+                        <input id="cidade" type="text" name="cidade" class="form-control"
+                          placeholder="Nome da sua cidade *" required="required" data-error="cidade é obrigatorio.">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="senha">Senha *</label>
+                        <input id="senha" type="password" size="10" name="senha" class="form-control"
+                          placeholder="Senha *" required="required" data-error="Senha é obrigatorio.">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="conf_senha">Confirma Senha *</label>
+                        <input id="conf_senha" type="password" size="10" name="conf_senha" class="form-control"
+                          placeholder="Confirmação da senha *" required="required"
+                          data-error="confirmação de senha é obrigatorio.">
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="col-md-12">
+                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block
+                            " value="Cadastrar">
+                  </div>
+                </div>
+            </div>
   </form>
+</div>
+</div>
 
 
-  <!--INICIO RODAPE -->
+</div>
+<!-- /.8 -->
 
-  <?php include('rodape.php'); ?>
+</div>
+<!-- /.row-->
 
-  <!--FIM RODAPE -->
+</div>
+</div>
+
+<!--INICIO RODAPE -->
+<?php include('rodape.php'); ?>
+<!--FIM RODAPE -->

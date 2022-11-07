@@ -16,3 +16,7 @@ input {
 p {
   font-weight: 700;
 }
+a.cadastrese{
+  color: green;
+  font-size: 16px;
+}
