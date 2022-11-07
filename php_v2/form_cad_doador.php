@@ -11,42 +11,42 @@
 
 <div class="container_cadastro">
 
-  <h3>Realize seu Cadastro Doador ;)</h3>
+  <div class="form_cadastro">
+  <h3>Realize seu Cadastro Doador</h3>
 
   <form method="post" action="insert_doador.php"><br><br>
 
     <!-- doador -->
     <div>
-      <label>Nome</label>
+      <label>Nome </label>
       <input type="text" name="nome" placeholder="Nome Completo"><br><br>
 
-      <label>E-mail</label>
+      <label>E-mail </label>
       <input type="text" name="email" placeholder="Digite seu email"><br><br>
 
-      <label>Telefone</label>
+      <label>Telefone </label>
       <input type="text" name="telefone" placeholder="Digite seu telefone"><br><br>
 
-      <label>Cidade</label>
+      <label>Cidade </label>
       <input type="text" name="cidade" placeholder="Digite a sua cidade"><br><br>
 
-      <label>Login</label>
+      <label>Login </label>
       <input type="text" name="login" placeholder="Digite seu login"><br><br>
 
-      <label>Senha</label>
+      <label>Senha </label>
       <input type="text" name="senha" placeholder="Digite a senha"><br><br>
 
-      <label>Confirme sua Senha</label>
-      <input type="text" name="conf_senha" placeholder="Digite a senha novamente"><br><br>
     </div>
     </br>
-    <form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
+
+    <!--<form name="foto_usuario" type="text" method="post" enctype="multipart/form-data" action="upload.php">
       <label>
         <p>Sua Foto</p> <br><input type="file" name="image" />
-    </form><br>
+    </form>--><br>
 
-    <br><button type="submit" name="enviar" id="button">Cadastrar doador</button>
+    <br><button type="submit" name="enviar" id="button">Cadastrar Doador</button>
 
-
+  </div>
   </form>
 
 
