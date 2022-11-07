@@ -11,7 +11,7 @@
   <div class=" text-center mt-5 ">
     <h1>Cadastro de Protetor</h1>
   </div>
-  <form method="post" action="insert_protetor.php"><br><br>
+  <form method="post" action="insert_protetor.php">
     <div class="row ">
       <div class="col-lg-7 mx-auto">
         <div class="card mt-2 mx-auto p-4 bg-light">
