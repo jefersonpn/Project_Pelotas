@@ -32,11 +32,23 @@
   <h3>PARCEIROS</h3><br>
 
   <div>
-    <img class="logo" alt="AMIGO PET" width="150px" src="img/home/amigopet_home2.png" />
-    <img class="logo" alt="AMIGO PET" width="150px" src="img/home/amigopet_home3.jpg" />
-    <img class="logo" alt="AMIGO PET" width="150px" src="img/home/amigopet_home4.jpg" />
-    <img class="logo" alt="AMIGO PET" width="150px" src="img/home/amigopet_home5.jpg" />
-    <img class="logo" alt="AMIGO PET" width="150px" src="img/home/amigopet_home6.jpg" />
+    <?php
+                
+      $sql= "Select * from `parceiro`";
+                $result= mysqli_query($conn, $sql);
+                while($row=mysqli_fetch_assoc($result))
+                {
+                  $id=$row['id_parceiro'];
+                  $nome=$row['nome'];
+                  $email=$row['email'];
+                  $telefone=$row['telefone'];
+                  $imagem=$row['imagem'];
+                  $cnpj=$row['cnpj'];
+
+                  echo "<img class=\"logo\" alt=\"AMIGO PET\" width=\"150px\" src=\"images/parceiros/$imagem\" />
+";
+                }
+    ?>
   </div>
 
 </section>
@@ -81,6 +93,7 @@
                           }else{
                             echo "<button type='button' disabled='disabled' class='Coletar'>Coletar</button></th>";
                           } 
+   
                       ?>
                   <th>&nbsp;</th>
                   <th>Descrição</th>
@@ -90,184 +103,60 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class="alert" role="alert">
-                  <td>
-                    <label class="checkbox-wrap checkbox-primary">
-                      <input type="checkbox" checked>
-                      <span class="checkmark"></span>
-                    </label>
-                  </td>
-                  <td>
-                    <div class="img" style="background-image: url(images/product-1.png);"></div>
-                  </td>
-                  <td>
-                    <div class="email">
-                      <span>Sneakers Shoes 2020 For Men </span>
-                      <span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-                    </div>
-                  </td>
-                  <td>Disponivel</td>
-                  <td class="quantity">
-                    <div class="input-group">
-                      <?php if($_SESSION['usuario_logado']['0']){
-                        echo "<span>Agropet</span>";
-                      }else{
-                        echo "Faça <a style='color:blue;' href='login.php'>Login</a>";
-                      } ?>
-
-                    </div>
-                  </td>
-                  <td><?php 
-                          if($_SESSION['usuario_logado']['0']){
-                            echo "<button type='button' class='Coletar'>Coletar</button></th>";
-                          }else{
-                            echo "<button type='button' disabled='disabled' class='Coletar'>Coletar</button></th>";
-                          } 
-                      ?></td>
-                </tr>
-
-                <tr class="alert" role="alert">
-                  <td>
-                    <label class="checkbox-wrap checkbox-primary">
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                  </td>
-                  <td>
-                    <div class="img" style="background-image: url(images/product-2.png);"></div>
-                  </td>
-                  <td>
-                    <div class="email">
-                      <span>Sneakers Shoes 2020 For Men </span>
-                      <span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-                    </div>
-                  </td>
-                  <td>Disponivel</td>
-                  <td class="quantity">
-                    <div class="input-group">
-                      <?php if($_SESSION['usuario_logado']['0']){
-                        echo "<span>Agropet</span>";
-                      }else{
-                        echo "Faça <a style='color:blue;' href='login.php'>Login</a>";
-                      } ?>
-                    </div>
-                  </td>
-                  <td><?php 
-                          if($_SESSION['usuario_logado']['0']){
-                            echo "<button type='button' class='Coletar'>Coletar</button></th>";
-                          }else{
-                            echo "<button type='button' disabled='disabled' class='Coletar'>Coletar</button></th>";
-                          } 
-                      ?></td>
-                </tr>
-
-
-                <tr class="alert" role="alert">
-                  <td>
-                    <label class="checkbox-wrap checkbox-primary">
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                  </td>
-                  <td>
-                    <div class="img" style="background-image: url(images/product-3.png);"></div>
-                  </td>
-                  <td>
-                    <div class="email">
-                      <span>Sneakers Shoes 2020 For Men </span>
-                      <span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-                    </div>
-                  </td>
-                  <td>Disponivel</td>
-                  <td class="quantity">
-                    <div class="input-group">
-                      <?php if($_SESSION['usuario_logado']['0']){
-                        echo "<span>Agropet</span>";
-                      }else{
-                        echo "Faça <a style='color:blue;' href='login.php'>Login</a>";
-                      } ?>
-                    </div>
-                  </td>
-                  <td><?php 
-                          if($_SESSION['usuario_logado']['0']){
-                            echo "<button type='button' class='Coletar'>Coletar</button></th>";
-                          }else{
-                            echo "<button type='button' disabled='disabled' class='Coletar'>Coletar</button></th>";
-                          } 
-                      ?></td>
-                </tr>
-
-
-                <tr class="alert" role="alert">
-                  <td>
-                    <label class="checkbox-wrap checkbox-primary">
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                  </td>
-                  <td>
-                    <div class="img" style="background-image: url(images/product-4.png);"></div>
-                  </td>
-                  <td>
-                    <div class="email">
-                      <span>Sneakers Shoes 2020 For Men </span>
-                      <span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-                    </div>
-                  </td>
-                  <td>Disponivel</td>
-                  <td class="quantity">
-                    <div class="input-group">
-                      <?php if($_SESSION['usuario_logado']['0']){
-                        echo "<span>Agropet</span>";
-                      }else{
-                        echo "Faça <a style='color:blue;' href='login.php'>Login</a>";
-                      } ?>
-                    </div>
-                  </td>
-                  <td><?php 
-                          if($_SESSION['usuario_logado']['0']){
-                            echo "<button type='button' class='Coletar'>Coletar</button></th>";
-                          }else{
-                            echo "<button type='button' disabled='disabled' class='Coletar'>Coletar</button></th>";
-                          } 
-                      ?></td>
-                </tr>
-
-
-                <tr class="alert" role="alert">
-                  <td class="border-bottom-0">
-                    <label class="checkbox-wrap checkbox-primary">
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                  </td>
-                  <td class="border-bottom-0">
-                    <div class="img" style="background-image: url(images/product-1.png);"></div>
-                  </td>
-                  <td class="border-bottom-0">
-                    <div class="email">
-                      <span>Sneakers Shoes 2020 For Men </span>
-                      <span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-                    </div>
-                  </td>
-                  <td>Disponivel</td>
-                  <td class="quantity">
-                    <div class="input-group">
-                      <?php if($_SESSION['usuario_logado']['0']){
-                        echo "<span>Agropet</span>";
-                      }else{
-                        echo "Faça <a style='color:blue;' href='login.php'>Login</a>";
-                      } ?>
-                    </div>
-                  </td>
-                  <td><?php 
-                          if($_SESSION['usuario_logado']['0']){
-                            echo "<button type='button' class='Coletar'>Coletar</button></th>";
-                          }else{
-                            echo "<button type='button' disabled='disabled' class='Coletar'>Coletar</button></th>";
-                          } 
-                      ?></td>
-                </tr>
+                <?php
+                
+                $sql= "Select * from `doacao_voluntaria`";
+                          $result= mysqli_query($conn, $sql);
+                          while($row=mysql_fetch_assoc($result))
+                          {
+                            $id=$row['id_doacao'];
+                            $descricao=$row['descricao'];
+                            $status=$row['status'];
+                            $quantidade=$row['quantidade'];
+                            $imagem=$row['imagem'];
+                            $data_cadastro=$row['data_cadastro'];
+                            
+                            if($status==1)
+                            {
+                                  echo "
+                                      <tr class=\"alert\" role=\"alert\">
+                                      <td>
+                                        <label class=\"checkbox-wrap checkbox-primary\">
+                                        <input type=\"checkbox\" checked>
+                                          <span class=\"checkmark\"></span>
+                                        </label>
+                                      </td>
+                                      <td>
+                                        <div class=\"img\" style=\"background-image: url(images/parceiros/$imagem);\"></div>
+                                      </td>
+                                      <td>
+                                       <div class=\"email\">
+                                          <span>".$descricao." </span>
+                                        </div>
+                                      </td>
+                                      <td>";if($status == 1){echo "Disponivel";}echo "</td>
+                                      <td class=\"quantity\">
+                                        <div class=\"input-group\">";
+                                        if($_SESSION['usuario_logado']['0'])
+                                        {
+                                          echo "<span>Agropet</span>";
+                                        }else{
+                                              echo "Faça <a style='color:blue;' href='login.php'>Login</a>";
+                                              } 
+                                        echo "</div>
+                                              </td>
+                                              <td>" ; 
+                              
+                                        if($_SESSION['usuario_logado']['0']){
+                                          echo "<button type='button' class='Coletar'>Coletar</button></th>";
+                                        }else{
+                                          echo "<button type='button' disabled='disabled' class='Coletar'>Coletar</button></th>";
+                                        } 
+                                        echo  "</td>
+                                               </tr>";
+                              } 
+                          }
+                ?>
 
               </tbody>
             </table>
