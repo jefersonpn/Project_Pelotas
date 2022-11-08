@@ -116,8 +116,7 @@
                             $imagem=$row['imagem'];
                             $data_cadastro=$row['data_cadastro'];
                             
-                            if($status==1)
-                            {
+                            
                                   echo "
                                       <tr class=\"alert\" role=\"alert\">
                                       <td>
@@ -127,34 +126,16 @@
                                         </label>
                                       </td>
                                       <td>
-                                        <div class=\"img\" style=\"background-image: url(images/parceiros/$imagem);\"></div>
+                                        <div class=\"img\" style=\"background-image: url(images/$imagem);\"></div>
                                       </td>
                                       <td>
                                        <div class=\"email\">
-                                          <span>".$descricao." </span>
+                                          <span>$descricao</span>
                                         </div>
-                                      </td>
-                                      <td>";if($status == 1){echo "Disponivel";}echo "</td>
-                                      <td class=\"quantity\">
-                                        <div class=\"input-group\">";
-                                        if($_SESSION['usuario_logado']['0'])
-                                        {
-                                          echo "<span>Agropet</span>";
-                                        }else{
-                                              echo "Faça <a style='color:blue;' href='login.php'>Login</a>";
-                                              } 
-                                        echo "</div>
-                                              </td>
-                                              <td>" ; 
-                              
-                                        if($_SESSION['usuario_logado']['0']){
-                                          echo "<button type='button' class='Coletar'>Coletar</button></th>";
-                                        }else{
-                                          echo "<button type='button' disabled='disabled' class='Coletar'>Coletar</button></th>";
-                                        } 
-                                        echo  "</td>
-                                               </tr>";
-                              } 
+                                      ";
+                                      echo  "</td>
+                                             </tr>";
+                               
                           }
                 ?>
 
