@@ -87,6 +87,7 @@
             <table class="table">
               <thead class="thead-primary">
                 <tr>
+                  <?php print_r($_SESSION['usuario_logado']);  ?>
                   <th> <?php 
                           if($_SESSION['usuario_logado']['0']){
                             echo "<button type='button' class='Coletar'>Coletar</button></th>";

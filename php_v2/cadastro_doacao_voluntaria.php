@@ -49,12 +49,25 @@
                         <label for="parceiro">Local a ser deixado *</label>
                         <select id="parceiro">
                           <option value="" selected>Click aqui</option>
-                          <option value="13">Waltzer Agrocereais</option>
-                          <option value="14">SallaBerry</option>
-                          <option value="15">Gato Cão Veterinaria</option>
-                          <option value="16">AgroPet Progresso</option>
-                          <option value="17">Agropet Agropecuária</option>
+                          <?php
 
+                          //falta mandar id _doador
+                
+                          $sql= "Select * from `parceiro`";
+                                    $result= mysqli_query($conn, $sql);
+                                    while($row=mysqli_fetch_assoc($result))
+                                    {
+                                      $id=$row['id_parceiro'];
+                                      $nome=$row['nome'];
+                                      $email=$row['email'];
+                                      $telefone=$row['telefone'];
+                                      $imagem=$row['imagem'];
+                                      $cnpj=$row['cnpj'];
+
+                                      echo "<option value=\"$id\">$nome</option>" ;
+
+                                    }
+                        ?>
                         </select>
 
                       </div>

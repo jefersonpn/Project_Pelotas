@@ -20,7 +20,7 @@ include_once("conectar.php");
 
     <div>
       </br>
-      <h2>Seja bem vindo <?php echo $_SESSION['usuario_logado']['0']; ?></h2>
+      <h2>Seja bem vindo <?php echo $_SESSION['usuario_logado']['1']; ?></h2>
     </div>
 
     <div>
