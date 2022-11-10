@@ -111,7 +111,7 @@
                   {
                     $id=$row['id_doacao']; 
                     $descricao=$row['descricao']; 
-                    $status=$row['status'];
+                    $status=$row['fk_status_id'];
                     $quantidade=$row['quantidade']; 
                     $imagem=$row['imagem']; 
                     $data_cadastro=$row['data_cadastro'];
@@ -135,12 +135,15 @@
                       // echo "<p>".$id_parceiro ." ".$nome_parceiro." ".$email_parceiro." ".$telefone_parceiro." ".$imagem_parceiro." ".$data_cadastro_parceiro." ".$cnpj_parceiro."</p>" ;
                     }
                     
-                    switch ($status)
+                     switch ($status)
                     {
                       case '1':
                         $status= "Disponivel";
                       break; 
-                      case '0':
+                      case '2':
+                        $status= "Retirado";
+                      break;
+                      case '5':
                         $status= "Reservado";
                       break;
                     }
