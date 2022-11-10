@@ -12,7 +12,7 @@ session_start();
 
 //Using the bindParam you can pass values by Variables
 
-
+$id_doacao=$_POST['id_doacao'];
 $descricao = $_POST['descricao'];
 $quantidade = $_POST['quantidade'];
 $id_parceiro = $_POST['parceiro'];
@@ -37,20 +37,29 @@ if(in_array($ext_imagem, $extensions))
 $upload_imagem= 'images/'.$nome_imagem;
 move_uploaded_file($imagem_file_temp, $upload_imagem);
 
-
-$sqlquery = "INSERT INTO doacao_voluntaria (descricao, status, quantidade, fk_parceiro_id, fk_doador_id, imagem) VALUES
-('$descricao', '1', '$quantidade', '$id_parceiro', '$id_doador', '$nome_imagem')";
-
-if ($conn->query($sqlquery) === TRUE) {
-
-$msg = "Item incluso com sucesso!";
-session_start();
-
-header("location: painel_doador.php");
-
-} else {
-echo "Error: " . $sqlquery . "<br>" . $conn->error;
+// Se nao selecionar uma imagem deve ficar a mesma que ja tinha.
+if($nome_imagem == '')
+{ 
+  $restante= " WHERE `id_doacao`= $id_doacao";
+}else{
+  $restante=" ,`imagem`= '$nome_imagem' WHERE `id_doacao`= $id_doacao";
 }
+
+$sqlquery = "UPDATE `doacao_voluntaria` SET `descricao`= '$descricao', `quantidade`= $quantidade, `fk_parceiro_id`= $id_parceiro ".$restante; 
+
+if ($conn->query($sqlquery) === TRUE) 
+{
+
+  session_start();
+  $_SESSION['msg'] =array();
+  array_push($_SESSION['msg'],"Item atualizado com sucesso!");
+
+
+  header("location: painel_doador.php");
+
+  }else {
+  echo "Error: " . $sqlquery . "<br>" . $conn->error;
+  }
 
 }else{
 echo "A imagem precisa ser ( jpeg jpg png ).. verifique!";

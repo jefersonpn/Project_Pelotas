@@ -34,14 +34,14 @@ include_once("conectar.php");
                   <thead class="thead-primary">
                     <tr>
                       <form action="cadastro_doacao_voluntaria.php" method="POST">
-                        <th><button formaction="deletar_item.php" type=" submit" class="Deletar">Deletar</button></th>
                         <th>
-                          <button formaction="cadastro_doacao_voluntaria.php" type="submit" class="Doar">+ Doar</button>
+                          <button type="submit" class="Doar">+ Doar</button>
                         </th>
                       </form>
                       <th>Descrição</th>
                       <th>Status</th>
                       <th>Parceiro</th>
+                      <th>&nbsp;</th>
                       <th>&nbsp;</th>
                     </tr>
                   </thead>
@@ -91,12 +91,6 @@ include_once("conectar.php");
                     echo "
                     <tr class=\"alert\" role=\"alert\">
                       <td>
-                        <label class=\"checkbox-wrap checkbox-primary\">
-                          <input type=\"checkbox\" checked>
-                          <span class=\"checkmark\"></span>
-                        </label>
-                      </td>
-                      <td>
                         <div class=\"img\" style=\"background-image: url(images/$imagem);\"></div>
                       </td>
                       <td>
@@ -114,9 +108,17 @@ include_once("conectar.php");
                          echo "<div>Faça <a href=\"login.php\">login</a></div></td>";
                       }
                       
-                      echo "</td>
-                    </tr>";
-
+                      if($_SESSION['usuario_logado']){
+                        echo "
+                        </td>
+                          <td>
+                           <a href=\"deletar_doacao.php?deletar_id=$id\"  name=\"deletar_id\" class=\"btn btn-danger\">Deletar</a>
+                          </td>
+                           <td>
+                           <a href=\"editar_doacao.php?editar_id=$id\"  name=\"editar_id\" class=\"btn btn-warning\">Editar</a>
+                          </td>
+                        </tr>";
+                      }
                    } 
                 ?>
 
