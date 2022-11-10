@@ -87,15 +87,7 @@
             <table class="table">
               <thead class="thead-primary">
                 <tr>
-                  <th> <?php 
-                          if($_SESSION['usuario_logado']['0']){
-                            echo "<button type='button' class='Coletar'>Coletar</button></th>";
-                          }else{
-                            echo "<button type='button' disabled='disabled' class='Coletar'>Coletar</button></th>";
-                          } 
-   
-                      ?>
-                  <th>&nbsp;</th>
+                  <th>
                   <th>Descrição</th>
                   <th>Status</th>
                   <th>Parceiro</th>
@@ -150,12 +142,7 @@
                           
                     echo "
                     <tr class=\"alert\" role=\"alert\">
-                      <td>
-                        <label class=\"checkbox-wrap checkbox-primary\">
-                          <input type=\"checkbox\" checked>
-                          <span class=\"checkmark\"></span>
-                        </label>
-                      </td>
+                      
                       <td>
                         <div class=\"img\" style=\"background-image: url(images/$imagem);\"></div>
                       </td>
