@@ -6,12 +6,19 @@
 <?php include('cabecalho.php'); ?>
 <!--FIM CABEÇALHO-->
 
+<?php
+  session_start();
+  //print_r($_SESSION['usuario_logado']); 
+  
+?>
+
 <!--FORMULÁRIO DE CADASTRO-->
 <div class="container">
   <div class=" text-center mt-5 ">
     <h1>Cadastro de Doação - AMIGOPET</h1>
   </div>
-  <form method="post" action="insert_doacao.php" onsubmit="validaForm(); return false;" class="form">
+  <form method="post" action="insert_doacao.php" enctype="multipart/form-data" onsubmit="validaForm(); return false;"
+    class="form">
     <div class="row ">
       <div class="col-lg-7 mx-auto">
         <div class="card mt-2 mx-auto p-4 bg-light">
@@ -47,12 +54,14 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="parceiro">Local a ser deixado *</label>
-                        <select id="parceiro">
+                        <select id="parceiro" name="parceiro">
                           <option value="" selected>Click aqui</option>
                           <?php
 
-                          //falta mandar id _doador
-                
+                          //Mandando id _doador
+                          
+                          
+                          
                           $sql= "Select * from `parceiro`";
                                     $result= mysqli_query($conn, $sql);
                                     while($row=mysqli_fetch_assoc($result))
@@ -74,7 +83,7 @@
                     </div>
                   </div>
                   </br>
-                  <div class="row">
+                  <div class=" row">
                     <!-- UPLOAD Image -->
                     <div class="col-md-12">
                       <div class="form-group">
@@ -86,7 +95,7 @@
 
                   <div class="col-md-12">
                     <input type="submit" class="btn btn-success btn-send  pt-2 btn-block
-                            " name="send" value="Enviar Mensagem">
+                            " name="submit" value="Cadastrar">
                   </div>
                 </div>
             </div>
