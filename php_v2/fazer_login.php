@@ -38,7 +38,7 @@ if (($result = $conn->query($sqlquery)) !== FALSE)
         case $login == 1:
           session_start();
           $_SESSION['usuario_logado'] =array();
-          array_push($_SESSION['usuario_logado'],$row['id_protetor'], $row['nome'], $row['email'], $row['telefone'], $row['cidade'], $row['login']);
+          array_push($_SESSION['usuario_logado'],$row['tipo_acesso'],$row['id_protetor'], $row['nome'], $row['email'], $row['telefone'], $row['cidade'], $row['login']);
         
           //print_r($_SESSION['usuario_logado']);
           header("location: painel_protetor.php");
@@ -46,7 +46,7 @@ if (($result = $conn->query($sqlquery)) !== FALSE)
         case $login == 2:
           session_start();
           $_SESSION['usuario_logado'] =array();
-          array_push($_SESSION['usuario_logado'],$row['id_doador'], $row['nome'], $row['email'], $row['telefone'], $row['cidade'], $row['login']);
+          array_push($_SESSION['usuario_logado'],$row['tipo_acesso'],$row['id_doador'], $row['nome'], $row['email'], $row['telefone'], $row['cidade'], $row['login']);
           
           //print_r($_SESSION['usuario_logado']);
           header("location: painel_doador.php");
@@ -54,7 +54,7 @@ if (($result = $conn->query($sqlquery)) !== FALSE)
         case $login == 3:
           session_start();
           $_SESSION['usuario_logado'] =array();
-          array_push($_SESSION['usuario_logado'],$row['id_parceiro'], $row['nome'], $row['email'], $row['telefone'], $row['cidade'], $row['login']);
+          array_push($_SESSION['usuario_logado'],$row['tipo_acesso'],$row['id_parceiro'], $row['nome'], $row['email'], $row['telefone'], $row['cidade'], $row['login']);
           
           //print_r($_SESSION['usuario_logado']);
           header("location: painel_parceiro.php");
