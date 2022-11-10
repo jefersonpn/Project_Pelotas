@@ -1,5 +1,6 @@
 <?php 
     include ("conectar.php");
+    
 ?>
 
 <!DOCTYPE php>
@@ -67,13 +68,18 @@
             
               session_start();
               //print_r($_SESSION['usuario_logado']);
+              
+              // Pegando o tipo de acesso
+              $usuario= $_SESSION['usuario_logado']['0'];
             
+              // Verificando se esta logado
             if (($_SESSION['usuario_logado'])== '')
             {
             echo "<a href='login.php?title=login'>Cadastrar | Login</a></li>";
           }else
-          {
-          echo "<a href='logout.php'>Logout</a></li>";
+          {         
+            echo "<a href='logout.php'>Logout</a></li>
+                <li><a href='painel_".$usuario.".php'>Painel</a></li>";
           }
 
           ?>
