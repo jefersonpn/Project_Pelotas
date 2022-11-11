@@ -75,7 +75,7 @@
                         data-error="confirmação de senha é obrigatorio.">
                     </div>
                   </div>
-                </div>
+                </div><br>
 
                 <div class="col-md-12">
                   <input type="submit" class="btn btn-success btn-send  pt-2 btn-block
@@ -95,7 +95,7 @@
 <!-- /.row-->
 
 </div>
-</div>
+</div><br><br>
 
 <!--INICIO RODAPE -->
 <?php include('rodape.php'); ?>
