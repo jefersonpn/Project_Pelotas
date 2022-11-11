@@ -9,7 +9,7 @@
 <!--FORMULÁRIO DE CADASTRO-->
 <div class="container">
   <div class=" text-center mt-5 ">
-    <h1>Cadastro de Protetor</h1>
+    <h1>Cadastro de Parceiro</h1>
   </div>
   <form method="post" action="insert_parceiro.php" enctype="multipart/form-data">
     <div class="row ">
@@ -101,7 +101,7 @@
                       <input id="imagem" type="file" name="imagem" class="form-control p-1">
                     </div>
                   </div>
-                </div>
+                </div><br>
 
                 <div class="col-md-12">
                   <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Cadastrar">
@@ -120,7 +120,7 @@
 <!-- /.row-->
 
 </div>
-</div>
+</div><br><br>
 
 <!--INICIO RODAPE -->
 <?php include('rodape.php'); ?>
