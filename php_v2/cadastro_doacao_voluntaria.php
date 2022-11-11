@@ -55,7 +55,7 @@
                       <div class="form-group">
                         <label for="parceiro">Local a ser deixado *</label>
                         <select id="parceiro" name="parceiro">
-                          <option value="" selected>Click aqui</option>
+                          <option value="" selected>Clique Aqui</option>
                           <?php
 
                           //Mandando id _doador
