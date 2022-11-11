@@ -102,7 +102,7 @@
 <!-- /.row-->
 
 </div>
-</div>
+</div><br><br>
 
 <!--INICIO RODAPE -->
 <?php include('rodape.php'); ?>
