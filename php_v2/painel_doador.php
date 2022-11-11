@@ -20,7 +20,8 @@ include_once("conectar.php");
 
     <div>
       </br>
-      <h2>Seja bem vindo <?php echo $_SESSION['usuario_logado']['2']; ?></h2>
+      <h2>Seja bem vindo <?php echo $_SESSION['usuario_logado']['2']; $id_doador= $_SESSION['usuario_logado']['1'];?>
+      </h2>
     </div>
 
     <div>
@@ -48,7 +49,7 @@ include_once("conectar.php");
                   <tbody>
                     <?php
 
-                  $sql_doador= "Select * from `doacao_voluntaria`" ;
+                  $sql_doador= "Select * from `doacao_voluntaria` where `fk_doador_id`='$id_doador'" ;
                   $result=mysqli_query($conn, $sql_doador);
                   while($row=mysqli_fetch_assoc($result)) 
                   {
@@ -112,15 +113,28 @@ include_once("conectar.php");
                       }
                       
                       if($_SESSION['usuario_logado']){
-                        echo "
-                        </td>
-                          <td>
-                           <a href=\"deletar_doacao.php?deletar_id=$id\"  name=\"deletar_id\" class=\"btn btn-danger\">Deletar</a>
-                          </td>
-                           <td>
-                           <a href=\"editar_doacao.php?editar_id=$id\"  name=\"editar_id\" class=\"btn btn-warning\">Editar</a>
-                          </td>
-                        </tr>";
+                         if ($status  == "Disponivel")
+                          {
+                              echo "
+                                    </td>
+                                      <td>
+                                      <a href=\"deletar_doacao.php?deletar_id=$id\"  name=\"deletar_id\" class=\"btn btn-danger\">Deletar</a>
+                                      </td>
+                                      <td>
+                                      <a href=\"editar_doacao.php?editar_id=$id\"  name=\"editar_id\" class=\"btn btn-warning\">Editar</a>
+                                      </td>
+                                    </tr>";
+                          }else{
+                              echo "
+                                    </td>
+                                      <td>
+                                      <button disabled  name=\"deletar_id\" class=\"btn btn-danger\">Deletar</button>
+                                      </td>
+                                      <td>
+                                      <button disabled  name=\"editar_id\" class=\"btn btn-warning\">Editar</button>
+                                      </td>
+                                    </tr>";
+                          }
                       }
                    } 
                 ?>

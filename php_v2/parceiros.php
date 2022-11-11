@@ -28,7 +28,7 @@
 <section class="container_ParceiroHome">
 
   <div class="item">
-    <img src="img/parceiro/amigopet_parceiro01.png" width="100x" alt="">
+    <img src="images/parceiros/Waltzer.png" width="100x" alt="">
   </div>
 
   <div class="item">
@@ -49,7 +49,7 @@
 <section class="container_ParceiroHome">
 
   <div class="item">
-    <img src="img/parceiro/amigopet_parceiro04.png" width="100x" alt=""><br><br>
+    <img src="images/parceiros/sallaberry.png" width="100x" alt=""><br><br>
   </div>
 
   <div class="item">
@@ -68,7 +68,7 @@
 <section class="container_ParceiroHome">
 
   <div class="item">
-    <img src="img/parceiro/amigopet_parceiro02.png" width="100x" alt=""><br><br>
+    <img src="images/parceiros/agropet.png" width="100x" alt=""><br><br>
   </div>
 
   <div class="item">

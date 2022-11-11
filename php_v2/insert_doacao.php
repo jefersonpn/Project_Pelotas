@@ -38,8 +38,8 @@ $upload_imagem= 'images/'.$nome_imagem;
 move_uploaded_file($imagem_file_temp, $upload_imagem);
 
 
-$sqlquery = "INSERT INTO doacao_voluntaria (descricao, status, quantidade, fk_parceiro_id, fk_doador_id, imagem) VALUES
-('$descricao', '1', '$quantidade', '$id_parceiro', '$id_doador', '$nome_imagem')";
+$sqlquery = "INSERT INTO doacao_voluntaria (descricao, status, quantidade, fk_parceiro_id, fk_doador_id, imagem, fk_status_id) VALUES
+('$descricao', '1', '$quantidade', '$id_parceiro', '$id_doador', '$nome_imagem', '1')";
 
 if ($conn->query($sqlquery) === TRUE) {
 
