@@ -117,7 +117,7 @@ body {
     max-width: 600px;
     display: flex;
     margin-left: 270px;
-    background: tomato;
+    /*background: tomato;*/
 }
 
 .item {
