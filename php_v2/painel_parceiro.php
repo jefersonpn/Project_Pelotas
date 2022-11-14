@@ -12,7 +12,7 @@ session_start();
 $id_parceiro_logado= $_SESSION['usuario_logado']['1'];
 ?>
 
-<!-- INICIO TELA PRINCIPAL PROTETORES -->
+<!-- INICIO TELA PRINCIPAL PARCEIRO -->
 
 <div class="posicao_padrao1">
 
@@ -38,6 +38,7 @@ $id_parceiro_logado= $_SESSION['usuario_logado']['1'];
                       <th>Status</th>
                       <th>Parceiro</th>
                       <th>&nbsp;</th>
+                      <th>&nbsp;</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -49,6 +50,7 @@ $id_parceiro_logado= $_SESSION['usuario_logado']['1'];
                   {
                     $id=$row['id_doacao']; 
                     $descricao=$row['descricao']; 
+                    $token=$row['token'];
                     $status=$row['fk_status_id'];
                     $quantidade=$row['quantidade']; 
                     $imagem=$row['imagem']; 
@@ -107,6 +109,15 @@ $id_parceiro_logado= $_SESSION['usuario_logado']['1'];
                       }
                       
                       echo "
+                      <td>
+                        "; 
+                        if (isset($_GET['mostrarToken'])){
+                            echo "<a href='painel_parceiro.php' class=\"btn btn-success\">".$token."</a>";
+                        }else{
+                            echo "<a href=\"painel_parceiro.php?mostrarToken=$token\"  name=\"mostra_token\" class=\"btn btn-success\">Ver";
+                        } 
+                      echo "</a>
+                      </td>
                       <td>
                         <a href=\"editar_status_doacao.php?id_doacao=$id\"  name=\"id_doacao\" class=\"btn btn-warning\">Alterar</a>
                       </td>

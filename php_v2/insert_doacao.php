@@ -14,6 +14,7 @@ print_r($_SESSION['usuario_logado']['1']);
 
 
 $descricao = $_POST['descricao'];
+$token = strtoupper(md5( uniqid(mt_rand()) ));
 $quantidade = $_POST['quantidade'];
 $id_parceiro = $_POST['parceiro'];
 $id_doador = $_SESSION['usuario_logado']['1'];
@@ -38,8 +39,8 @@ $upload_imagem= 'images/'.$nome_imagem;
 move_uploaded_file($imagem_file_temp, $upload_imagem);
 
 
-$sqlquery = "INSERT INTO doacao_voluntaria (descricao, status, quantidade, fk_parceiro_id, fk_doador_id, imagem, fk_status_id) VALUES
-('$descricao', '1', '$quantidade', '$id_parceiro', '$id_doador', '$nome_imagem', '1')";
+$sqlquery = "INSERT INTO doacao_voluntaria (descricao,token, quantidade, fk_parceiro_id, fk_doador_id, imagem, fk_status_id) VALUES
+('$descricao','$token', '$quantidade', '$id_parceiro', '$id_doador', '$nome_imagem', '1')";
 
 if ($conn->query($sqlquery) === TRUE) {
 

@@ -38,6 +38,7 @@ include_once("conectar.php");
                       <th>Descrição</th>
                       <th>Status</th>
                       <th>Parceiro</th>
+                      <th>Token</th>
                       <th>&nbsp;</th>
                     </tr>
                   </thead>
@@ -55,7 +56,8 @@ include_once("conectar.php");
                     while($row=mysqli_fetch_assoc($result_doacao)) 
                     {
                       $id=$row['id_doacao']; 
-                      $descricao=$row['descricao']; 
+                      $descricao=$row['descricao'];
+                      $token=$row['token']; 
                       $status=$row['fk_status_id'];
                       $quantidade=$row['quantidade']; 
                       $imagem=$row['imagem']; 
@@ -116,6 +118,15 @@ include_once("conectar.php");
                       if($_SESSION['usuario_logado']){
                         echo "
                         </td>
+                            <td>
+                        "; 
+                        if (isset($_GET['mostrarToken'])){
+                            echo "<a href='meus_coletados.php' class=\"btn btn-success\">".$token."</a>";
+                        }else{
+                            echo "<a href=\"meus_coletados.php?mostrarToken=$token\"  name=\"mostra_token\" class=\"btn btn-success\">Ver";
+                        } 
+                      echo "</a>
+                      </td>
                           <td>
                            <a href=\"deletar_solicitacao.php?deletar_id=$id\"  name=\"deletar_id\" class=\"btn btn-danger\">Desistir</a>
                           </td>
