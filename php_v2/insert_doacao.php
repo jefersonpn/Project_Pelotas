@@ -7,7 +7,7 @@ include 'conectar.php';
 
 
 session_start();
-//print_r($_SESSION['usuario_logado']); 
+print_r($_SESSION['usuario_logado']['1']); 
 
 
 //Using the bindParam you can pass values by Variables

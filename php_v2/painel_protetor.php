@@ -21,7 +21,7 @@ include_once("conectar.php");
     <div>
       </br>
       <h2>Seja bem vindo
-        <?php $id_protetor= $_SESSION['usuario_logado']['1']; echo $_SESSION['usuario_logado']['2']; $id_protetor=$_SESSION['usuario_logado']['1'];?>
+        <?php $id_protetor= $_SESSION['usuario_logado']['1']; echo $_SESSION['usuario_logado']['2']; ?>
       </h2>
       <p> <a href="meus_coletados.php" class="btn btn-success m-2">Meus Coletados</a>
       </p>

@@ -20,7 +20,7 @@ $id_parceiro_logado= $_SESSION['usuario_logado']['1'];
 
     <div>
       </br>
-      <h2>Seja bem vindo <?php echo $_SESSION['usuario_logado']['2']; ?></h2>
+      <h2>Seja bem vindo <u><?php echo $_SESSION['usuario_logado']['2']; ?></u></h2>
     </div>
 
     <div>

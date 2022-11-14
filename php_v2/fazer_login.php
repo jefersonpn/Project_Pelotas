@@ -41,6 +41,7 @@ if (($result = $conn->query($sqlquery)) !== FALSE)
           array_push($_SESSION['usuario_logado'],$row['tipo_acesso'],$row['id_protetor'], $row['nome'], $row['email'], $row['telefone'], $row['cidade'], $row['login']);
         
           //print_r($_SESSION['usuario_logado']);
+
           header("location: painel_protetor.php");
           break;
         case $login == 2:
@@ -49,6 +50,7 @@ if (($result = $conn->query($sqlquery)) !== FALSE)
           array_push($_SESSION['usuario_logado'],$row['tipo_acesso'],$row['id_doador'], $row['nome'], $row['email'], $row['telefone'], $row['cidade'], $row['login']);
           
           //print_r($_SESSION['usuario_logado']);
+
           header("location: painel_doador.php");
           break;
         case $login == 3:
@@ -57,6 +59,7 @@ if (($result = $conn->query($sqlquery)) !== FALSE)
           array_push($_SESSION['usuario_logado'],$row['tipo_acesso'],$row['id_parceiro'], $row['nome'], $row['email'], $row['telefone'], $row['cidade'], $row['login']);
           
           //print_r($_SESSION['usuario_logado']);
+
           header("location: painel_parceiro.php");
           break;
        
