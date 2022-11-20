@@ -45,7 +45,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 <?php include('cabecalho.php'); ?>
 <!--FIM CABEÇALHO-->
 
-
+<div class="h5 text-success p-2"><?php if(isset($_GET['msg'])){ echo $_GET['msg'];} ?></div>
 <div class="flex-container">
   <div class="flex-child container_login">
     <form method="post" action="fazer_login.php?login=1">
@@ -62,7 +62,8 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         </p>
 
         <label class="" for="email_login">E-mail</label>
-        <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@amigopet.com" /><br>
+        <input id="email_login" name="email_login" required="required" type="text"
+          placeholder="contato@amigopet.com" /><br>
 
         <label for="senha_login">Senha</label>
         <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" />
@@ -88,7 +89,8 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         </p>
 
         <label for="email_login">E-mail</label>
-        <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@amigopet.com" /><br>
+        <input id="email_login" name="email_login" required="required" type="text"
+          placeholder="contato@amigopet.com" /><br>
 
         <label for="senha_login">Senha</label>
         <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" />
@@ -109,12 +111,13 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
       <div>
 
         <p>
-           Ainda não tem conta? 
-           <a class="cadastrese" href="form_cad_parceiro.php">Cadastre-se</a>
+          Ainda não tem conta?
+          <a class="cadastrese" href="form_cad_parceiro.php">Cadastre-se</a>
         </p>
 
         <label for="email_login">E-mail</label>
-        <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@amigopet.com" /><br>
+        <input id="email_login" name="email_login" required="required" type="text"
+          placeholder="contato@amigopet.com" /><br>
 
         <label for="senha_login">Senha</label>
         <input id="senha_login" name="senha_login" required="required" type="password" placeholder="senha" /><br>

@@ -7,7 +7,7 @@ include 'conectar.php';
 
 
 session_start();
-//print_r($_SESSION['usuario_logado']); 
+print_r($_SESSION['usuario_logado']); 
 
 
 //Using the bindParam you can pass values by Variables
@@ -16,7 +16,7 @@ $id_doacao=$_POST['id_doacao'];
 $descricao = $_POST['descricao'];
 $quantidade = $_POST['quantidade'];
 $id_parceiro = $_POST['parceiro'];
-$id_doador = $_SESSION['usuario_logado']['1'];
+$id_doador = $_SESSION['usuario_logado']['0'];
 // Tratanto a imagem
 $imagem = $_FILES['imagem'];
 $nome_imagem= $imagem['name'];

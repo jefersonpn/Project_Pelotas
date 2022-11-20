@@ -8,7 +8,7 @@ session_start();
 
 // Capturando as informações do enviadas pelo botao delete.
 $id_doacao = $_GET['deletar_id'];
-$id_doador = $_SESSION['usuario_logado']['0'];
+$id_doador = $_SESSION['usuario_logado']['1'];
 
 echo $id_doacao;
 

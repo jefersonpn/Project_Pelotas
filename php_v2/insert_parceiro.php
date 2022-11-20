@@ -34,12 +34,30 @@ if(in_array($ext_imagem, $extensions))
     
     if ($conn->query($sqlquery) === TRUE) {
         
-        $msg = "Seja bem vindo!";
         session_start();
+
         $_SESSION['usuario_logado'] =array();
-        array_push($_SESSION['usuario_logado'], $nome, $email, $telefone, $cidade, $cnpj);     
-        //print_r($_SESSION['usuario_logado']);
-        header("location: painel_parceiro.php");
+        array_push($_SESSION['usuario_logado'],"sim");
+        
+        $_SESSION['tipo_acesso'] =array();
+        array_push($_SESSION['tipo_acesso'],$row['tipo_acesso']);
+        
+        $_SESSION['id_doador'] =array();
+        array_push($_SESSION['id_doador'],$row['id_doador']);
+
+        $_SESSION['nome'] =array();
+        array_push($_SESSION['nome'],$row['nome']);
+
+        $_SESSION['email'] =array();
+        array_push($_SESSION['email'],$row['email']);
+        
+        $_SESSION['telefone'] =array();
+        array_push($_SESSION['telefone'],$row['telefone']);
+
+        $_SESSION['cidade'] =array();
+        array_push($_SESSION['cidade'],$row['cidade']);
+    
+        header("location: login.php?msg=Cadastro como Parceiro foi realizado com sucesso, faça o login.");
         
     } else {
     echo "Error: " . $sqlquery . "<br>" . $conn->error;

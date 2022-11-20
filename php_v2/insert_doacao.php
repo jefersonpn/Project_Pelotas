@@ -14,10 +14,10 @@ print_r($_SESSION['usuario_logado']['1']);
 
 
 $descricao = $_POST['descricao'];
-$token = strtoupper(md5( uniqid(mt_rand()) ));
+$token = substr(strtoupper(md5( uniqid(mt_rand()) )),0 ,6);
 $quantidade = $_POST['quantidade'];
 $id_parceiro = $_POST['parceiro'];
-$id_doador = $_SESSION['usuario_logado']['1'];
+$id_doador = $_SESSION['id_doador']['0'];
 // Tratanto a imagem
 $imagem = $_FILES['imagem'];
 $nome_imagem= $imagem['name'];

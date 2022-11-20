@@ -4,7 +4,7 @@
 include 'conectar.php';
 
 session_start();
-//print_r($_SESSION['usuario_logado']); 
+//print_r($_SESSION['nome']); 
 
 $id_doacao = $_GET['id_doacao'];
 $id_protetor = $_GET['id_protetor'];

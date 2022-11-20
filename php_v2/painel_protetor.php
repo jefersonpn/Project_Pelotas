@@ -21,7 +21,7 @@ include_once("conectar.php");
     <div>
       </br>
       <h2>Seja bem vindo
-        <?php $id_protetor= $_SESSION['usuario_logado']['1']; echo $_SESSION['usuario_logado']['2']; ?>
+        <?php  $id_protetor= $_SESSION['id_protetor'][0]; echo $_SESSION['nome'][0]; ?>
       </h2>
       <p> <a href="meus_coletados.php" class="btn btn-success m-2">Meus Coletados</a>
       </p>
@@ -48,8 +48,8 @@ include_once("conectar.php");
                       <tbody>
                         <?php
 
-                  $sql_doador= "Select * from `doacao_voluntaria`" ;
-                  $result=mysqli_query($conn, $sql_doador);
+                  $sql_doacao= "Select * from `doacao_voluntaria`" ;
+                  $result=mysqli_query($conn, $sql_doacao);
                   while($row=mysqli_fetch_assoc($result)) 
                   {
                     $id=$row['id_doacao']; 

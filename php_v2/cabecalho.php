@@ -1,7 +1,5 @@
-<?php 
-    include ("conectar.php");
-    
-?>
+<?php
+include 'conectar.php'; ?>
 
 <!DOCTYPE php>
 <php lang="pt-br">
@@ -26,32 +24,29 @@
   </head>
 
   <body>
-    <?php 
-    switch ($_GET['title'])
-{
-    case '':
-        echo "<title>Home - Amigo Pet</title>";
-        break; 
-    case 'home':
-        echo "<title>Home - Amigo Pet</title>";
-        break;
-    case 'contato':
-        echo "<title>Contato - Amigo Pet</title>";
-        break;
-    case 'sobre':
-        echo "<title>Sobre - Amigo Pet</title>";
-        break;
-    case 'parceiros':
-        echo "<title>Parceiros - Amigo Pet</title>";
-        break;
-    case 'login':
-        echo "<title>Login - Amigo Pet</title>";
-        break;
-    case 'cadastrar':
-        echo "<title>Cadastro - Amigo Pet</title>";
-        break;
-}
-    ?>
+    <?php switch ($_GET['title']) {
+        case '':
+            echo '<title>Home - Amigo Pet</title>';
+            break;
+        case 'home':
+            echo '<title>Home - Amigo Pet</title>';
+            break;
+        case 'contato':
+            echo '<title>Contato - Amigo Pet</title>';
+            break;
+        case 'sobre':
+            echo '<title>Sobre - Amigo Pet</title>';
+            break;
+        case 'parceiros':
+            echo '<title>Parceiros - Amigo Pet</title>';
+            break;
+        case 'login':
+            echo '<title>Login - Amigo Pet</title>';
+            break;
+        case 'cadastrar':
+            echo '<title>Cadastro - Amigo Pet</title>';
+            break;
+    } ?>
     <!--INICIO CABEÇALHO-->
     <div class="retangulo">
 
@@ -65,24 +60,24 @@
           <li><a href="parceiros.php?title=parceiros">Parceiros</a></li>
           <li>
             <?php
-            
-              session_start();
-              //print_r($_SESSION['usuario_logado']);
-              
-              // Pegando o tipo de acesso
-              $usuario= $_SESSION['usuario_logado']['0'];
-            
-              // Verificando se esta logado
-            if (($_SESSION['usuario_logado'])== '')
-            {
-            echo "<a href='login.php?title=login'>Cadastrar | Login</a></li>";
-          }else
-          {         
-            echo "<a href='logout.php'>Logout</a></li>
-                <li><a href='painel_".$usuario.".php'>Painel</a></li>";
-          }
+            session_start();
+            //print_r($_SESSION['nome']);
 
-          ?>
+            // Pegando o tipo de acesso
+            $usuario = $_SESSION['tipo_acesso']['0'];
+
+            // Verificando se esta logado
+            if ($_SESSION['usuario_logado']) {
+
+              echo "<a href='logout.php'>Logout</a></li>
+                <li><a href='painel_" .
+                    $usuario .
+                    ".php'>Painel</a></li>";
+                
+            } else {
+             echo "<a href='login.php?title=login'>Cadastrar | Login</a></li>";   
+            }
+            ?>
 
         </ul>
       </nav>
