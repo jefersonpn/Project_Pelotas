@@ -32,38 +32,47 @@ if(in_array($ext_imagem, $extensions))
 
     $sqlquery = "INSERT INTO parceiro (nome, email, telefone, cidade, login_parceiro, senha_parceiro, cnpj, imagem) VALUES ('$nome', '$email', '$telefone', '$cidade', '$login_parceiro', '$senha_parceiro', '$cnpj', '$nome_imagem')";
     
-    if ($conn->query($sqlquery) === TRUE) {
+    if ($conn->query($sqlquery) === TRUE)
+    {
+        //echo $email, $senha;
+        $sql = "SELECT * FROM parceiro WHERE email= '$email' AND senha_parceiro = '$senha_parceiro'  ";
+        $result = $conn->query($sql);
+        //print_r($result);
+        while($row = $result->fetch_assoc())
+        {
         
-        session_start();
+            session_start();
 
-        $_SESSION['usuario_logado'] =array();
-        array_push($_SESSION['usuario_logado'],"sim");
-        
-        $_SESSION['tipo_acesso'] =array();
-        array_push($_SESSION['tipo_acesso'],$row['tipo_acesso']);
-        
-        $_SESSION['id_doador'] =array();
-        array_push($_SESSION['id_doador'],$row['id_doador']);
+            $_SESSION['usuario_logado'] =array();
+            array_push($_SESSION['usuario_logado'],"sim");
+            
+            $_SESSION['tipo_acesso'] =array();
+            array_push($_SESSION['tipo_acesso'],$row['tipo_acesso']);
+            
+            $_SESSION['id_doador'] =array();
+            array_push($_SESSION['id_doador'],$row['id_doador']);
 
-        $_SESSION['nome'] =array();
-        array_push($_SESSION['nome'],$row['nome']);
+            $_SESSION['nome'] =array();
+            array_push($_SESSION['nome'],$row['nome']);
 
-        $_SESSION['email'] =array();
-        array_push($_SESSION['email'],$row['email']);
-        
-        $_SESSION['telefone'] =array();
-        array_push($_SESSION['telefone'],$row['telefone']);
+            $_SESSION['email'] =array();
+            array_push($_SESSION['email'],$row['email']);
+            
+            $_SESSION['telefone'] =array();
+            array_push($_SESSION['telefone'],$row['telefone']);
 
-        $_SESSION['cidade'] =array();
-        array_push($_SESSION['cidade'],$row['cidade']);
-    
-        header("location: login.php?msg=Cadastro como Parceiro foi realizado com sucesso, faça o login.");
+            $_SESSION['cidade'] =array();
+            array_push($_SESSION['cidade'],$row['cidade']);
         
-    } else {
-    echo "Error: " . $sqlquery . "<br>" . $conn->error;
+            header("location: painel_parceiro.php");
+        }    
+    } else 
+    {
+        echo "Error: " . $sqlquery . "<br>" . $conn->error;
     }
 
-}else{
+}else
+{
     echo "A imagem precisa ser ( jpeg  jpg  png ).. verifique!";
     echo "</br> <a href='".$anterior."'>VOLTAR</a>";
 }

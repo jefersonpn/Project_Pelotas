@@ -64,7 +64,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="cnpj">CNPJ *</label>
-                      <input id="cnpj" type="number" size="10" name="cnpj" class="form-control"
+                      <input id="cnpj" type="text" size="10" name="cnpj" class="form-control"
                         placeholder="37556661000190 *" required="required" data-error="Cnpj é obrigatorio.">
                     </div>
                   </div>
