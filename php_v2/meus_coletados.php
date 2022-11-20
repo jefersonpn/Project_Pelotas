@@ -8,7 +8,7 @@ include_once("conectar.php");
 
 <?php
   session_start();
- // print_r($_SESSION['usuario_logado']); 
+  print_r($_SESSION['usuario_logado'], $_GET['id_protetor']); 
   
 ?>
 
@@ -21,7 +21,7 @@ include_once("conectar.php");
     <div>
       </br>
       <h2 class="h4 mx-4">Seja bem vindo
-        <?php echo $_SESSION['usuario_logado']['2']; $id_protetor=$_SESSION['usuario_logado']['1'];  ?></h2>
+        <?php echo $_SESSION['usuario_logado']['0']; $id_protetor=$_GET['id_protetor'];  ?></h2>
     </div>
 
     <div>

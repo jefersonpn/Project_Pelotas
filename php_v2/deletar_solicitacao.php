@@ -32,10 +32,23 @@ $sqlquery = "UPDATE `doacao_voluntaria` SET `fk_status_id`= $status WHERE `id_do
 if ($conn->query($sqlquery) === TRUE) 
 {
 
-  session_start();
-  $_SESSION['msg'] =array();
-  array_push($_SESSION['msg'],"Item atualizado com sucesso!");
+    // Tirando 1 da coluna qtd_coleta caso. protetor desista da doacao 
+    $sql_doacao= "Select `id_protetor`, `qtd_coleta`  from `protetor` where `id_protetor`= $id_protetor" ;
+                  $result=mysqli_query($conn, $sql_doacao);
+                  while($row=mysqli_fetch_assoc($result)) 
+                  {
+                    $id_protetor=$row['id_protetor']; 
+                    $qtd_coleta= $row['qtd_coleta'];
+                  }
 
+    $qtd_coleta= $qtd_coleta - 1;
+
+    $sqlquery = "UPDATE `protetor` SET `qtd_coleta`= $qtd_coleta WHERE `id_protetor`= $id_protetor"; 
+
+    if ($conn->query($sqlquery) === FALSE) 
+    {
+    echo "Error: " . $sqlquery . "<br>" . $conn->error;
+    }      
 
   header("location: $anterior");
 
