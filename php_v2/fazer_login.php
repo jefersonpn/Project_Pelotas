@@ -134,7 +134,7 @@ switch ($login){
             array_push($_SESSION['usuario_logado'],'sim');
             
             $_SESSION['tipo_acesso'] =array();
-            array_push($_SESSION['usuario_logado'],$row['tipo_acesso']);
+            array_push($_SESSION['tipo_acesso'],$row['tipo_acesso']);
             
             $_SESSION['id_parceiro'] =array();
             array_push($_SESSION['id_parceiro'],$row['id_parceiro']);
@@ -151,7 +151,7 @@ switch ($login){
             $_SESSION['cidade'] =array();
             array_push($_SESSION['cidade'],$row['cidade']);
               
-            //print_r($_SESSION['usuario_logado']);
+            //print_r($_SESSION['tipo_acesso']);
 
             header("location: painel_parceiro.php");
           }

@@ -61,7 +61,7 @@ include 'conectar.php'; ?>
           <li>
             <?php
             session_start();
-            //print_r($_SESSION['nome']);
+            //print_r($_SESSION['tipo_acesso']);
 
             // Pegando o tipo de acesso
             $usuario = $_SESSION['tipo_acesso']['0'];
